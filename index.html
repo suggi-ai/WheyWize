@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WheyWize</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: control strip on top, then one result block per protein type (best pick → chart → ranked table). */
+:root{
+  --ink:#14232b;
+  --paper:#f3f5f2;
+  --panel:#ffffff;
+  --line:#d9dfdb;
+  --muted:#5c6b70;
+  --accent:#0f6e64;      /* deep teal */
+  --accent-soft:#dcefeb;
+  --gold:#b7791f;        /* best-value marker */
+  --warn:#a6461b;
+  --warn-soft:#f8e6dc;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e6ecea; --paper:#0f1719; --panel:#162124; --line:#2a383b; --muted:#93a4a6;
+    --accent:#4cc2b2; --accent-soft:#18332f; --gold:#e3a94a; --warn:#f08a5d; --warn-soft:#3a2219;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e6ecea; --paper:#0f1719; --panel:#162124; --line:#2a383b; --muted:#93a4a6;
+  --accent:#4cc2b2; --accent-soft:#18332f; --gold:#e3a94a; --warn:#f08a5d; --warn-soft:#3a2219;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 56px;display:grid;gap:24px}
+header{display:grid;gap:6px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,36px);letter-spacing:-.01em;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:21px;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:68ch}
+.stamp{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:12.5px;white-space:nowrap}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.gold{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.chip.plain{background:transparent;border:1px solid var(--line);color:var(--muted);font-weight:500}
+
+form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:16px}
+.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.row{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:10px;align-content:start}
+.row>*{min-width:0}
+.row.off{opacity:.55}
+.row label.inc{display:flex;gap:8px;align-items:center;font-weight:600}
+.row .what{font-size:12.5px;color:var(--muted);margin:-6px 0 0 26px}
+.seg{display:inline-flex;flex-wrap:wrap;max-width:100%;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:fit-content}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:6px 14px;cursor:pointer;font-weight:500;font-variant-numeric:tabular-nums}
+.seg input:checked+label{background:var(--accent);color:var(--panel)}
+.seg input:focus-visible+label{outline:2px solid var(--accent);outline-offset:-2px}
+.field{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+select,input[type=text]{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:0}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=checkbox]{accent-color:var(--accent);width:18px;height:18px}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:end;justify-content:space-between}
+.pin{display:flex;gap:10px;align-items:end;flex-wrap:wrap}
+.pinfirst{padding-bottom:12px;border-bottom:1px solid var(--line)}
+.pin input{width:130px;font-variant-numeric:tabular-nums;letter-spacing:.05em}
+button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:9px 18px;background:var(--accent);color:var(--panel);cursor:pointer}
+button:hover{filter:brightness(1.08)}
+.hint{font-size:12.5px;color:var(--muted)}
+
+.result{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:16px}
+.rhead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+.pick{border-left:4px solid var(--gold);padding:8px 14px;background:var(--paper);border-radius:0 8px 8px 0}
+.pick strong{font-family:var(--display)}
+.chart{overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:520px;height:auto}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.top td{background:color-mix(in srgb,var(--gold) 9%,transparent)}
+.rank{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums}
+.pname{font-weight:600}
+.meta{color:var(--muted);font-size:12.5px}
+.flags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+a.buy{display:inline-block;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:7px;padding:4px 10px;white-space:nowrap}
+a.buy:hover{background:var(--accent-soft)}
+.wrap>*{min-width:0}
+.stamp .chip{white-space:normal}
+.empty{color:var(--muted);padding:6px 0}
+.notes{display:grid;gap:10px;font-size:13.5px;color:var(--muted)}
+.notes h3{font-family:var(--display);font-size:15px;color:var(--ink);margin:0}
+.notes ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.err{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:14px}
+.cards{display:none;gap:10px}
+.card{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:6px;background:var(--panel)}
+.card.top{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 7%,var(--panel))}
+.card .row1{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card .big{font-family:var(--display);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.card .row2{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.card a.buy{padding:8px 14px}
+@media (max-width:640px){
+  .wrap{padding:16px 14px 40px;gap:18px}
+  form,.result{padding:14px}
+  .tablewrap{display:none}
+  .cards{display:grid}
+  .chart svg{min-width:0}
+  .bar{flex-direction:column;align-items:stretch}
+  .pin input{width:100%}
+  button#go{width:100%;padding:12px}
+}
+@media (prefers-reduced-motion: no-preference){ .result{animation:in .25s ease-out both} @keyframes in{from{transform:translateY(4px)}to{transform:none}} }
+</style>
+<style>
+.usp{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:14px 16px;display:grid;gap:8px}
+.usp strong.t{font-family:var(--display);font-size:17px}
+.usp ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14px}
+.usp li{display:flex;gap:8px;align-items:baseline}
+.usp li::before{content:"✓";color:var(--accent);font-weight:700}
+.usp a{color:var(--accent);font-weight:600}
+.daily{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.daily input{width:64px;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:5px 8px;font-variant-numeric:tabular-nums}
+.compare{font-size:13px;color:var(--muted)}
+.notes details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.notes summary{cursor:pointer;font-family:var(--display);font-weight:700;color:var(--ink);font-size:15px}
+.notes details[open] summary{margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>WheyWize</h1>
+    <p class="sub">Pick what your client wants. Each list is ranked by the cost of 100 g of actual protein (or creatine), so a cheaper tub with less protein doesn't win by mistake.</p>
+    <div class="stamp" id="stamp"><span class="chip plain">Loading prices…</span></div>
+  </header>
+
+  <section class="usp" aria-label="What WheyWize compares">
+    <strong class="t">Clean-label products only</strong>
+    <ul>
+      <li>No artificial sweeteners in any protein: nothing with sucralose, acesulfame-K or aspartame. (Flavoured creatine is shown only if you pick it, with its sweetener named.)</li>
+      <li>Unsweetened, or sweetened only with stevia, monk fruit, dates or cocoa.</li>
+      <li>Whey means real whey concentrate; creatine means unflavoured creatine monohydrate.</li>
+      <li>Every ingredient list and protein claim is read before a product is listed. Anything we can't confirm stays out.</li>
+    </ul>
+    <span class="meta">Brand missing? <a href="#why">See why some brands aren't listed</a>.</span>
+  </section>
+
+  <form id="f" autocomplete="off">
+    <div class="pin pinfirst">
+      <div class="field">
+        <label for="pincode"><strong>1. Your delivery pincode</strong></label>
+        <input type="text" id="pincode" inputmode="numeric" maxlength="6" placeholder="e.g. 560034">
+      </div>
+      <span class="hint" id="pinhint">Used to tell you which stores deliver near you. Delivery charge and date show on the store page.</span>
+    </div>
+    <div class="meta"><strong style="color:var(--ink)">2. What does your client want?</strong></div>
+    <div class="rows" id="rows"></div>
+    <div class="bar"><span></span><button type="submit" id="go">Compare prices</button></div>
+  </form>
+
+  <main id="out" style="display:grid;gap:20px"></main>
+
+  <section class="notes" id="notes"></section>
+</div>
+
+<script>
+const CATS = [
+  {key:"unsweetened", label:"Unsweetened whey", what:"Whey concentrate, no sweetener at all", unit:"protein", daily:30, sizes:"protein", on:true},
+  {key:"natural", label:"Naturally sweetened whey", what:"Stevia, monk fruit, dates or cocoa. No sucralose", unit:"protein", daily:30, sizes:"protein", on:true},
+  {key:"yeast", label:"Yeast protein", what:"Fermented yeast protein, plant-based", unit:"protein", daily:30, sizes:"protein", on:false},
+  {key:"creatine", label:"Creatine monohydrate", what:"Unflavoured only. Creapure marked separately", unit:"creatine", daily:3, sizes:"creatine", on:false},
+  {key:"desi", label:"Desi protein foods", what:"Soya, dal, sattu, chana, peanuts, paneer, eggs. Check your local store", unit:"protein", daily:30, sizes:"none", on:false}
+];
+const SIZES = {
+  protein:[{v:"sachet",l:"Sachets"},{v:"0.5",l:"500 g"},{v:"1",l:"1 kg"},{v:"2",l:"2 kg"}],
+  creatine:[{v:"s",l:"~100 g"},{v:"m",l:"~250–300 g"},{v:"any",l:"Any size"}],
+  none:[]
+};
+const DEFAULT_SIZE={protein:"1",creatine:"m",none:"any"};
+const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
+let DATA=null;
+const state={};
+CATS.forEach(c=>state[c.key]={on:c.on,size:DEFAULT_SIZE[c.sizes],flavour:c.key==="creatine"?"Unflavoured":"any",daily:c.daily,storeView:"bigbasket"});
+function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function recall(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function trim(t,n){return t.length>n?t.slice(0,n-1)+"…":t}
+const STORES=[{v:"bigbasket",l:"BigBasket"},{v:"blinkit",l:"Blinkit"},{v:"instamart",l:"Instamart"},{v:"amazon",l:"Amazon Now"}];
+const STORE_URL={
+  bigbasket:q=>"https://www.bigbasket.com/ps/?q="+encodeURIComponent(q),
+  blinkit:q=>"https://blinkit.com/s/?q="+encodeURIComponent(q),
+  instamart:q=>"https://www.swiggy.com/instamart/search?custom_back=true&query="+encodeURIComponent(q),
+  amazon:q=>"https://www.amazon.in/s?k="+encodeURIComponent(q)
+};
+const METRO={"560":"Bengaluru","400":"Mumbai","401":"Mumbai region","410":"Navi Mumbai","110":"Delhi","121":"Faridabad","122":"Gurugram","201":"Noida / Ghaziabad","500":"Hyderabad","501":"Hyderabad region","600":"Chennai","411":"Pune","412":"Pune region","700":"Kolkata","380":"Ahmedabad","382":"Gandhinagar","302":"Jaipur","226":"Lucknow","160":"Chandigarh","682":"Kochi","641":"Coimbatore","570":"Mysuru","530":"Visakhapatnam","395":"Surat","452":"Indore"};
+function pinCity(pin){return /^\d{6}$/.test(pin)?(METRO[pin.slice(0,3)]||""):null}
+function buyLink(c,x){
+  if(c.key!=="desi") return {url:x.o.url,label:"Buy on "+x.o.store,short:"Buy"};
+  const v=state.desi.storeView, name=STORES.find(s=>s.v===v).l;
+  if(v==="bigbasket") return {url:x.o.url,label:"Buy on BigBasket",short:"BigBasket"};
+  const q=x.p.food==="Eggs"?"eggs 30":x.p.brand+" "+x.p.name;
+  return {url:STORE_URL[v](q),label:"Check on "+name,short:name};
+}
+function kgLabel(kg){return kg>=1?(+kg.toFixed(2))+" kg":Math.round(kg*1000)+" g"}
+
+function flavourKey(p,o){
+  if(p.category==="desi") return p.food;
+  if(p.category==="creatine") return p.flavoured?"Flavoured":"Unflavoured";
+  const s=o.flavour.toLowerCase();
+  if(s.includes("+")) return o.flavour;
+  if(s.includes("choc")||s.includes("cocoa")) return "Chocolate / Cocoa";
+  if(s.includes("coffee")||s.includes("mocha")) return "Coffee";
+  return o.flavour;
+}
+
+function buildRows(){
+  const rows=document.getElementById("rows"); rows.innerHTML="";
+  CATS.forEach(c=>{
+    const flavours=new Set();
+    DATA.products.filter(p=>p.category===c.key).forEach(p=>p.offers.forEach(o=>flavours.add(flavourKey(p,o))));
+    const st=state[c.key];
+    const div=document.createElement("div");
+    div.className="row"+(st.on?"":" off");
+    const sz=SIZES[c.sizes];
+    div.innerHTML=`
+      <label class="inc" for="on-${c.key}"><input type="checkbox" id="on-${c.key}" ${st.on?"checked":""}> ${c.label}</label>
+      <p class="what">${c.what}</p>
+      ${sz.length?`<div class="seg" role="radiogroup" aria-label="${c.label} size">${sz.map(s=>`<input type="radio" name="size-${c.key}" id="s-${c.key}-${s.v}" value="${s.v}" ${st.size===s.v?"checked":""}><label for="s-${c.key}-${s.v}">${s.l}</label>`).join("")}</div>`:""}
+      ${c.key==="desi"?`<div class="field"><span>Shop on</span><div class="seg" role="radiogroup" aria-label="Store">${STORES.map(s=>`<input type="radio" name="store-desi" id="st-${s.v}" value="${s.v}" ${st.storeView===s.v?"checked":""}><label for="st-${s.v}">${s.l}</label>`).join("")}</div></div>`:""}
+      ${flavours.size>1?`<div class="field"><label for="fl-${c.key}">${c.key==="desi"?"Food":"Flavour"}</label>
+        <select id="fl-${c.key}"><option value="any">${c.key==="desi"?"All foods":"Any flavour"}</option>${[...flavours].sort().map(f=>`<option ${st.flavour===f?"selected":""}>${esc(f)}</option>`).join("")}</select></div>`:""}
+      <div class="daily"><label for="dl-${c.key}">Daily ${c.unit} (for monthly cost)</label><input type="number" id="dl-${c.key}" min="1" max="${c.unit==="creatine"?20:200}" value="${st.daily}"> g</div>`;
+    rows.appendChild(div);
+    div.querySelector(`#on-${c.key}`).addEventListener("change",e=>{st.on=e.target.checked;div.classList.toggle("off",!st.on);render()});
+    div.querySelectorAll(`input[name=size-${c.key}]`).forEach(r=>r.addEventListener("change",e=>{st.size=e.target.value;render()}));
+    div.querySelectorAll(`input[name=store-desi]`).forEach(r=>r.addEventListener("change",e=>{st.storeView=e.target.value;store("whey_store",e.target.value);render()}));
+    const fl=div.querySelector(`#fl-${c.key}`); if(fl) fl.addEventListener("change",e=>{st.flavour=e.target.value;render()});
+    div.querySelector(`#dl-${c.key}`).addEventListener("input",e=>{const v=+e.target.value;if(v>0){st.daily=v;store("whey_daily_"+c.key,v);render()}});
+  });
+}
+
+// Which offers fit the chosen size, and what they cost
+function fit(cat,o){
+  const st=state[cat.key], sachet=o.kind==="sachet";
+  if(cat.sizes==="none") return {mult:1,pack:o.pack_note||kgLabel(o.size_kg)};
+  if(cat.sizes==="creatine"){
+    const g=o.size_kg*1000;
+    if(st.size==="any") return {mult:1,pack:sachet?`${o.sachet_count} × ${o.sachet_g} g sachets`:kgLabel(o.size_kg)};
+    if(sachet) return null;
+    if(st.size==="s"&&g<=160) return {mult:1,pack:kgLabel(o.size_kg)};
+    if(st.size==="m"&&g>160&&g<=350) return {mult:1,pack:kgLabel(o.size_kg)};
+    return null;
+  }
+  if(st.size==="sachet") return sachet?{mult:1,pack:`${o.sachet_count} × ${o.sachet_g} g sachet${o.sachet_count>1?"s":""}`,perSachet:o.price/o.sachet_count}:null;
+  if(sachet) return null;
+  const T=+st.size;
+  if(Math.abs(o.size_kg-T)<0.001) return {mult:1,pack:o.pack_note||kgLabel(o.size_kg)};
+  if(Math.abs(o.size_kg*2-T)<0.001 && !o.flavour.includes("+")) return {mult:2,pack:`2 × ${kgLabel(o.size_kg)} (buy two)`,two:true};
+  return null;
+}
+
+function options(cat){
+  const st=state[cat.key], out=[];
+  DATA.products.filter(p=>p.category===cat.key).forEach(p=>{
+    p.offers.forEach(o=>{
+      if(st.flavour!=="any" && flavourKey(p,o)!==st.flavour) return;
+      const f=fit(cat,o); if(!f) return;
+      const total=o.price*f.mult;
+      const activeG=(o.protein_g!=null?o.protein_g:o.size_kg*1000*p.protein_per_100g/100)*f.mult;
+      if(!activeG) return;
+      const per100=total/activeG*100;
+      out.push({p,o,total,pack:f.pack,two:f.two,perSachet:f.perSachet,per100,monthly:per100*st.daily/100*30});
+    });
+  });
+  out.sort((a,b)=>a.per100-b.per100||a.total-b.total);
+  const seen=new Set();
+  return out.filter(x=>{const k=x.p.id+"|"+x.o.store+"|"+x.o.flavour;if(seen.has(k))return false;seen.add(k);return true;});
+}
+
+function chart(list){
+  const top=list.slice(0,8); if(!top.length) return "";
+  const narrow=window.innerWidth<=640;
+  const W=narrow?380:760,rowH=34,left=narrow?150:230,right=narrow?58:86,H=top.length*rowH+30;
+  const L1=narrow?20:30,L2=narrow?21:40;
+  const max=Math.max(...top.map(x=>x.per100));
+  const step=max>400?200:max>100?100:max>40?20:10;
+  const nice=Math.ceil(max/step)*step;
+  const sx=v=>left+(W-left-right)*v/nice;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cost per 100 g, lowest first">`;
+  [0,nice/2,nice].forEach(t=>{s+=`<line x1="${sx(t)}" x2="${sx(t)}" y1="4" y2="${H-22}" stroke="var(--line)"/>
+    <text x="${sx(t)}" y="${H-6}" text-anchor="middle" font-size="11" fill="var(--muted)">${inr(t)}</text>`});
+  top.forEach((x,i)=>{
+    const y=8+i*rowH, label=`${x.p.brand} · ${x.o.store}`;
+    const sub=x.p.category==="desi"?`${x.p.food} · ${x.pack}`:`${x.p.name}${x.o.flavour!=="Unflavoured"?" · "+x.o.flavour:""}${x.two?" · ×2":""}`;
+    s+=`<text x="${left-10}" y="${y+12}" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">${esc(trim(label,L1))}</text>
+        <text x="${left-10}" y="${y+25}" text-anchor="end" font-size="10.5" fill="var(--muted)">${esc(trim(sub,L2))}</text>
+        <rect x="${left}" y="${y+3}" width="${Math.max(2,sx(x.per100)-left)}" height="20" rx="4" fill="${i===0?"var(--gold)":"var(--accent)"}" opacity="${i===0?1:.8}"/>
+        <text x="${sx(x.per100)+6}" y="${y+18}" font-size="12.5" font-weight="600" fill="var(--ink)" style="font-variant-numeric:tabular-nums">${inr(x.per100)}</text>`;
+  });
+  return s+"</svg>";
+}
+
+function flagsFor(x,i){
+  const fl=x.p.flags.map(f=>`<span class="chip plain">${esc(f)}</span>`);
+  if(/sucralose/i.test(x.p.sweetener)) fl.push(`<span class="chip warn">Artificial sweetener (sucralose)</span>`);
+  if(/not stated/i.test(x.p.sweetener)) fl.push(`<span class="chip warn">Sweetener not stated</span>`);
+  if(x.o.third_party) fl.push(`<span class="chip warn">Third-party seller</span>`);
+  if(x.o.low_stock) fl.push(`<span class="chip warn">Low stock</span>`);
+  if(x.two) fl.push(`<span class="chip plain">Buy two packs</span>`);
+  if(i===0) fl.unshift(`<span class="chip gold">Best value</span>`);
+  return fl;
+}
+
+function cheapestWhey(){
+  const c=CATS[0], saved={...state.unsweetened};
+  state.unsweetened={...saved,size:"1",flavour:"any"};
+  const l=options(c); state.unsweetened=saved; return l[0];
+}
+
+function render(){
+  const out=document.getElementById("out"); out.innerHTML="";
+  const pin=document.getElementById("pincode").value.trim();
+  const active=CATS.filter(c=>state[c.key].on);
+  if(!active.length){out.innerHTML=`<p class="empty">Tick at least one product type above.</p>`;return;}
+  active.forEach(c=>{
+    const st=state[c.key], list=options(c), unit=c.unit;
+    const sec=document.createElement("section"); sec.className="result";
+    const sizeLbl=(SIZES[c.sizes].find(s=>s.v===st.size)||{}).l;
+    const head=`<div class="rhead"><h2>${c.label}${sizeLbl&&c.sizes!=="none"?", "+sizeLbl:""}${st.flavour!=="any"?" · "+esc(st.flavour):""}</h2><span class="meta">${list.length} option${list.length===1?"":"s"} · lowest cost per 100 g ${unit} first</span></div>`;
+    if(!list.length){sec.innerHTML=head+`<p class="empty">Nothing in this size${st.flavour!=="any"?" and flavour":""} today. Try another size${st.flavour!=="any"?' or "Any flavour"':""}.</p>`;out.appendChild(sec);return;}
+    let head2="";
+    const b=list[0];
+    const cheapestTotal=[...list].sort((a,b)=>a.total-b.total)[0];
+    let pick=`<div class="pick"><strong>Best value today:</strong> ${esc(b.p.brand)} ${esc(b.p.name)} (${esc(c.key==="desi"?b.p.food:b.o.flavour)}, ${esc(b.pack)}) on ${b.o.store} at ${inr(b.total)}${b.perSachet?` (${inr(b.perSachet)} per sachet)`:""}. That's ${inr(b.per100)} per 100 g of ${unit}, or about ${inr(b.monthly)} a month for ${st.daily} g a day.`;
+    if(cheapestTotal!==b && c.key!=="desi") pick+=` <span class="meta">Lowest sticker price is ${esc(cheapestTotal.p.brand)} on ${cheapestTotal.o.store} at ${inr(cheapestTotal.total)}, but it gives less ${unit} per rupee.</span>`;
+    if(c.key==="desi"){
+      const city=pinCity(pin), v=STORES.find(s=>s.v===st.storeView).l;
+      let g;
+      if(city===null) g=`<strong>Enter your pincode at the top</strong> to see which stores deliver near you.`;
+      else if(city) g=`<strong>${esc(pin)} is in ${esc(city)}.</strong> Quick-delivery apps like Blinkit and Instamart serve many parts of ${esc(city)}; tap a store above to check it delivers to your pincode and see today's price there.`;
+      else g=`<strong>Quick-delivery apps (Blinkit, Instamart, Amazon Now) may not reach ${esc(pin)}.</strong> BigBasket and Amazon deliver to most pincodes; tap to check.`;
+      if(city!=="Bengaluru") g+=` The prices below are BigBasket Bengaluru reference prices; ${st.storeView==="bigbasket"?"your city's price may differ.":esc(v)+" will show your local price."}`;
+      head2=`<div class="pick" style="border-left-color:var(--accent)">${g}</div>`;
+    }
+    if(c.key==="desi"){const w=cheapestWhey(); if(w) pick+=` <span class="compare">For comparison, the cheapest unsweetened whey today is ${inr(w.per100)} per 100 g protein. Desi foods also bring carbs and fat, and dals and chana have a less complete protein than whey, soya, eggs or paneer.</span>`;}
+    if(st.size==="sachet") pick+=` <span class="meta">Sachets cost more per gram than tubs; they're best as a trial pack or for travel.</span>`;
+    pick+=`</div>`;
+    const rows=list.map((x,i)=>{const fl=flagsFor(x,i);return `<tr class="${i===0?"top":""}">
+        <td class="rank">${i+1}</td>
+        <td><div class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</div>
+            <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)}${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
+            <div class="meta">${x.p.protein_per_100g?x.p.protein_per_100g+" g "+unit+" per 100 g ("+esc(x.p.protein_basis)+")":esc(x.p.protein_basis)}</div>
+            ${fl.length?`<div class="flags">${fl.join("")}</div>`:""}</td>
+        <td>${esc(x.pack)}${x.perSachet?`<div class="meta">${inr(x.perSachet)} per sachet</div>`:""}</td>
+        <td class="num">${inr(x.total)}</td>
+        <td class="num"><strong>${inr(x.per100)}</strong></td>
+        <td class="num">${inr(x.monthly)}</td>
+        <td>${x.o.store}<div class="meta">${x.o.seller?("Sold by "+esc(x.o.seller)):"Seller shown on store page"}</div></td>
+        <td><a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener">${esc(buyLink(c,x).label)}</a></td></tr>`;}).join("");
+    const cards=list.slice(0,15).map((x,i)=>{const fl=flagsFor(x,i);return `<div class="card${i===0?" top":""}">
+        <div class="row1"><div><span class="rank">${i+1}.</span> <span class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</span></div><div style="text-align:right"><div class="big">${inr(x.per100)}</div><div class="meta" style="font-size:11px">per 100 g ${unit}</div></div></div>
+        <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)} · ${esc(x.pack)}${x.p.protein_per_100g?" · "+x.p.protein_per_100g+"% "+unit:""}${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
+        ${fl.length?`<div class="flags">${fl.join("")}</div>`:""}
+        <div class="row2"><div><strong>${inr(x.total)}</strong>${x.perSachet?` <span class="meta">(${inr(x.perSachet)}/sachet)</span>`:""} <span class="meta">on ${x.o.store}${x.o.seller?" · "+esc(x.o.seller):""}</span><div class="meta">About ${inr(x.monthly)}/month at ${st.daily} g a day</div></div>
+        <a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener">${esc(buyLink(c,x).short)}</a></div></div>`;}).join("");
+    sec.innerHTML=head+head2+pick+`<div class="chart">${chart(list)}</div>
+      <div class="cards">${cards}${list.length>15?`<p class="meta">Showing the top 15 of ${list.length}. Open on a wider screen for the full list.</p>`:""}</div>
+      <div class="tablewrap"><table><thead><tr><th>#</th><th>Product</th><th>Pack</th><th class="num">Total price</th><th class="num">₹ per 100 g ${unit}</th><th class="num">Per month</th><th>Store</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+      ${pin&&c.key!=="desi"?`<p class="meta">Delivering to ${esc(pin)}: enter this pincode on the store page to see the delivery charge and date before paying.</p>`:""}
+      ${c.key==="desi"?`<p class="meta">Desi food prices are BigBasket Bengaluru prices and change by city. Protein values are typical values per 100 g as sold.</p>`:""}`;
+    out.appendChild(sec);
+  });
+}
+
+function renderMeta(){
+  const t=new Date(DATA.checked_at);
+  const when=t.toLocaleString("en-IN",{weekday:"short",day:"numeric",month:"short",hour:"numeric",minute:"2-digit",timeZone:"Asia/Kolkata"});
+  const ageH=(Date.now()-t.getTime())/36e5;
+  document.getElementById("stamp").innerHTML=
+    `<span class="chip">Prices checked ${when} IST</span><span class="chip plain">${DATA.stores_checked.map(esc).join(" · ")}</span>`+
+    (ageH>30?`<span class="chip warn">These prices are over a day old</span>`:"")+
+    `<span class="chip plain">Refreshed daily by 7 am and 12 pm</span>`;
+  document.getElementById("notes").innerHTML=`
+    <details open id="why"><summary>Why some brands aren't listed</summary>
+      <p>WheyWize only lists a product when it passes all of these checks:</p>
+      <ul>
+        <li><strong>No artificial sweeteners.</strong> Sucralose (INS 955), acesulfame-K (INS 950) and aspartame (INS 951) rule a product out, however popular the brand.</li>
+        <li><strong>Whey concentrate, not a cheap blend.</strong> Blends padded with whey powder, isolate or yeast are left out unless they're clearly marked.</li>
+        <li><strong>The label must be readable.</strong> We need the ingredient list and the protein per scoop and scoop size (or per 100 g). If a listing hides these, the product stays out until it doesn't.</li>
+        <li><strong>Sold in India by the brand or a major store.</strong> Listings from small third-party sellers are flagged.</li>
+      </ul>
+      <p>Checked and left out right now:</p>
+      <ul>${DATA.excluded.map(e=>`<li><strong>${esc(e.brand)}:</strong> ${esc(e.reason)}</li>`).join("")}</ul>
+      <p>"Clean label" here means no artificial sweeteners and an honest, readable label. It isn't a lab test; some products also carry independent lab certification (such as Trustified), which we note where the listing shows it.</p>
+    </details>
+    <details><summary>How to read the numbers</summary>
+      <ul>
+        <li>${esc(DATA.notes)}</li>
+        <li>₹ per 100 g = total price ÷ grams of protein (or creatine) in the pack × 100. Protein values come from each product's label or listing.</li>
+        <li>Per month = ₹ per 100 g × your daily grams ÷ 100 × 30. Change the daily grams for each product type above.</li>
+        <li>For 1 kg and 2 kg, the list also shows buying two smaller packs when that works out cheaper.</li>
+        <li>"Third-party seller" means the listing isn't sold by the brand or a major store partner. Check the seller before paying.</li>
+      </ul>
+    </details>`;
+}
+
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();store("whey_pin",document.getElementById("pincode").value.trim());render();document.getElementById("out").scrollIntoView({behavior:"smooth",block:"start"})});
+let lastNarrow=window.innerWidth<=640;
+window.addEventListener("resize",()=>{const n=window.innerWidth<=640;if(DATA&&n!==lastNarrow){lastNarrow=n;render();}});
+document.getElementById("pincode").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,6);if(e.target.value.length===6){store("whey_pin",e.target.value);if(DATA)render();}});
+
+fetch("prices.json",{cache:"no-store"}).then(r=>{if(!r.ok) throw new Error(r.status);return r.json()}).then(d=>{
+  DATA=d; const p=recall("whey_pin"); if(p) document.getElementById("pincode").value=p;
+  CATS.forEach(c=>{const v=+recall("whey_daily_"+c.key); if(v>0) state[c.key].daily=v;});
+  const sv=recall("whey_store"); if(sv&&STORE_URL[sv]) state.desi.storeView=sv;
+  buildRows(); renderMeta(); render();
+}).catch(()=>{document.getElementById("out").innerHTML=`<div class="err">The price list didn't load. Reload the page; if it still fails, the daily price check may be updating it right now.</div>`;});
+</script>
+</body>
+</html>
