@@ -119,6 +119,7 @@ a.buy:hover{background:var(--accent-soft)}
 @media (prefers-reduced-motion: no-preference){ .result{animation:in .25s ease-out both} @keyframes in{from{transform:translateY(4px)}to{transform:none}} }
 </style>
 <style>
+.tagline{margin:-2px 0 2px;font-family:var(--display);font-weight:800;font-size:clamp(17px,2.6vw,21px);color:var(--accent);letter-spacing:.01em}
 .usp{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:14px 16px;display:grid;gap:8px}
 .usp strong.t{font-family:var(--display);font-size:17px}
 .usp ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14px}
@@ -137,6 +138,7 @@ a.buy:hover{background:var(--accent-soft)}
 <div class="wrap">
   <header>
     <h1>WheyWize</h1>
+    <p class="tagline">Choose Clean, Chosen by Fitness Doctor</p>
     <p class="sub">Pick what your client wants. Each list is ranked by the cost of 100 g of actual protein (or creatine), so a cheaper tub with less protein doesn't win by mistake.</p>
     <div class="stamp" id="stamp"><span class="chip plain">Loading prices…</span></div>
   </header>
@@ -172,8 +174,8 @@ a.buy:hover{background:var(--accent-soft)}
 
 <script>
 const CATS = [
-  {key:"unsweetened", label:"Unsweetened whey", what:"Whey concentrate, no sweetener at all", unit:"protein", daily:30, sizes:"protein", on:true},
-  {key:"natural", label:"Naturally sweetened whey", what:"Stevia, monk fruit, dates or cocoa. No sucralose", unit:"protein", daily:30, sizes:"protein", on:true},
+  {key:"unsweetened", label:"Unsweetened whey", what:"Whey concentrate, no sweetener at all", unit:"protein", daily:30, sizes:"protein", on:false},
+  {key:"natural", label:"Naturally sweetened whey", what:"Stevia, monk fruit, dates or cocoa. No sucralose", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"yeast", label:"Yeast protein", what:"Fermented yeast protein, plant-based", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"creatine", label:"Creatine monohydrate", what:"Unflavoured only. Creapure marked separately", unit:"creatine", daily:3, sizes:"creatine", on:false},
   {key:"desi", label:"Desi protein foods", what:"Soya, dal, sattu, chana, peanuts, paneer, eggs. Check your local store", unit:"protein", daily:30, sizes:"none", on:false}
@@ -324,11 +326,13 @@ function cheapestWhey(){
   const l=options(c); state.unsweetened=saved; return l[0];
 }
 
+let compared=false;
 function render(){
   const out=document.getElementById("out"); out.innerHTML="";
+  if(!compared){out.innerHTML=`<p class="empty">Tick the products your client wants, choose size and flavour, then tap <strong>Compare prices</strong>.</p>`;return;}
   const pin=document.getElementById("pincode").value.trim();
   const active=CATS.filter(c=>state[c.key].on);
-  if(!active.length){out.innerHTML=`<p class="empty">Tick at least one product type above.</p>`;return;}
+  if(!active.length){out.innerHTML=`<p class="empty">Tick at least one product type above, then tap Compare prices.</p>`;return;}
   active.forEach(c=>{
     const st=state[c.key], list=options(c), unit=c.unit;
     const sec=document.createElement("section"); sec.className="result";
@@ -411,7 +415,7 @@ function renderMeta(){
     </details>`;
 }
 
-document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();store("whey_pin",document.getElementById("pincode").value.trim());render();document.getElementById("out").scrollIntoView({behavior:"smooth",block:"start"})});
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();compared=true;store("whey_pin",document.getElementById("pincode").value.trim());render();document.getElementById("out").scrollIntoView({behavior:"smooth",block:"start"})});
 let lastNarrow=window.innerWidth<=640;
 window.addEventListener("resize",()=>{const n=window.innerWidth<=640;if(DATA&&n!==lastNarrow){lastNarrow=n;render();}});
 document.getElementById("pincode").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,6);if(e.target.value.length===6){store("whey_pin",e.target.value);if(DATA)render();}});
