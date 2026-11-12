@@ -2,7 +2,7 @@
 
 Daily price comparison of clean-label whey protein, yeast protein, creatine and desi protein foods in India.
 
-**Open the app:** https://suggi-ai.github.io/wheywize
+**Open the app:** https://suggi-ai.github.io/WheyWize/
 
 - Ranked by ₹ per 100 g of actual protein (or creatine), with a monthly cost calculator.
 - Only products without sucralose, acesulfame-K or aspartame (flavoured creatine is shown only when chosen, with its sweetener named).
