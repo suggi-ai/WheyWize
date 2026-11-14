@@ -390,7 +390,7 @@ function renderMeta(){
   document.getElementById("stamp").innerHTML=
     `<span class="chip">Prices checked ${when} IST</span><span class="chip plain">${DATA.stores_checked.map(esc).join(" · ")}</span>`+
     (ageH>30?`<span class="chip warn">These prices are over a day old</span>`:"")+
-    `<span class="chip plain">Refreshed daily by 7 am and 12 pm</span>`;
+    `<span class="chip plain">Refreshed daily</span>`;
   document.getElementById("notes").innerHTML=`
     <details open id="why"><summary>Why some brands aren't listed</summary>
       <p>WheyWize only lists a product when it passes all of these checks:</p>
