@@ -96,6 +96,8 @@ a.buy:hover{background:var(--accent-soft)}
 .wrap>*{min-width:0}
 .stamp .chip,.card .chip,td .chip{white-space:normal;max-width:100%}
 .empty{color:var(--muted);padding:6px 0}
+.howto{font-weight:700;font-size:17px;color:var(--ink);margin:4px 0 -6px}
+.howto .nb{color:var(--accent);white-space:nowrap}
 .notes{display:grid;gap:10px;font-size:13.5px;color:var(--muted)}
 .notes h3{font-family:var(--display);font-size:15px;color:var(--ink);margin:0}
 .notes ul{margin:0;padding-left:18px;display:grid;gap:3px}
@@ -155,6 +157,7 @@ a.buy:hover{background:var(--accent-soft)}
     <span class="meta">Brand missing? <a href="#why">See why some brands aren't listed</a>.</span>
   </section>
 
+  <p class="howto">Tick the products you want to compare, then tap <span class="nb">Compare prices</span>.</p>
   <form id="f" autocomplete="off">
     <div class="pin pinfirst">
       <div class="field">
@@ -334,7 +337,7 @@ function cheapestWhey(){
 let compared=false;
 function render(){
   const out=document.getElementById("out"); out.innerHTML="";
-  if(!compared){out.innerHTML=`<p class="empty">Tick the products you want, choose size and flavour, then tap <strong>Compare prices</strong>.</p>`;return;}
+  if(!compared) return;
   const pin=document.getElementById("pincode").value.trim();
   const active=CATS.filter(c=>state[c.key].on);
   if(!active.length){out.innerHTML=`<p class="empty">Tick at least one product type above, then tap Compare prices.</p>`;return;}
