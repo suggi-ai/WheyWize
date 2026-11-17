@@ -46,6 +46,7 @@ h2{font-family:var(--display);font-weight:700;font-size:21px;margin:0;text-wrap:
 .sub{color:var(--muted);margin:0;max-width:68ch}
 .stamp{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13.5px}
 .chip{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:12.5px;white-space:nowrap}
+.prot{font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
 .chip.warn{background:var(--warn-soft);color:var(--warn)}
 .chip.gold{background:transparent;border:1px solid var(--gold);color:var(--gold)}
 .chip.plain{background:transparent;border:1px solid var(--line);color:var(--muted);font-weight:500}
@@ -93,7 +94,7 @@ tr.top td{background:color-mix(in srgb,var(--gold) 9%,transparent)}
 a.buy{display:inline-block;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:7px;padding:4px 10px;white-space:nowrap}
 a.buy:hover{background:var(--accent-soft)}
 .wrap>*{min-width:0}
-.stamp .chip,.card .chip{white-space:normal;max-width:100%}
+.stamp .chip,.card .chip,td .chip{white-space:normal;max-width:100%}
 .empty{color:var(--muted);padding:6px 0}
 .notes{display:grid;gap:10px;font-size:13.5px;color:var(--muted)}
 .notes h3{font-family:var(--display);font-size:15px;color:var(--ink);margin:0}
@@ -139,7 +140,7 @@ a.buy:hover{background:var(--accent-soft)}
   <header>
     <h1>WheyWize</h1>
     <p class="tagline">Choose Clean, Chosen by Fitness Doctor</p>
-    <p class="sub">Pick what your client wants. Each list is ranked by the cost of 100 g of actual protein (or creatine), so a cheaper tub with less protein doesn't win by mistake.</p>
+    <p class="sub">Pick what you want. Each list runs from the cheapest pack to the costliest, with the <strong>protein content in bold</strong> beside every price. Higher-protein products often cost more, so the <strong>₹ per 100 g protein</strong> figure shows what you really pay for the protein.</p>
     <div class="stamp" id="stamp"><span class="chip plain">Loading prices…</span></div>
   </header>
 
@@ -162,7 +163,7 @@ a.buy:hover{background:var(--accent-soft)}
       </div>
       <span class="hint" id="pinhint">Used to tell you which stores deliver near you. Delivery charge and date show on the store page.</span>
     </div>
-    <div class="meta"><strong style="color:var(--ink)">2. What does your client want?</strong></div>
+    <div class="meta"><strong style="color:var(--ink)">2. What do you want?</strong></div>
     <div class="rows" id="rows"></div>
     <div class="bar"><span></span><button type="submit" id="go">Compare prices</button></div>
   </form>
@@ -282,21 +283,23 @@ function options(cat){
       out.push({p,o,total,pack:f.pack,two:f.two,perSachet:f.perSachet,per100,monthly:per100*st.daily/100*30});
     });
   });
-  out.sort((a,b)=>a.per100-b.per100||a.total-b.total);
+  out.sort((a,b)=>a.total-b.total||a.per100-b.per100);
   const seen=new Set();
-  return out.filter(x=>{const k=x.p.id+"|"+x.o.store+"|"+x.o.flavour;if(seen.has(k))return false;seen.add(k);return true;});
+  const list=out.filter(x=>{const k=x.p.id+"|"+x.o.store+"|"+x.o.flavour;if(seen.has(k))return false;seen.add(k);return true;});
+  if(list.length){const m=Math.min(...list.map(x=>Math.round(x.per100))); list.find(x=>Math.round(x.per100)===m).best=true;}
+  return list;
 }
 
 function chart(list){
   const top=list.slice(0,8); if(!top.length) return "";
   const narrow=window.innerWidth<=640;
-  const W=narrow?380:760,rowH=34,left=narrow?150:230,right=narrow?58:86,H=top.length*rowH+30;
+  const W=narrow?380:760,rowH=34,left=narrow?140:230,right=narrow?108:150,H=top.length*rowH+30;
   const L1=narrow?20:30,L2=narrow?21:40;
-  const max=Math.max(...top.map(x=>x.per100));
-  const step=max>400?200:max>100?100:max>40?20:10;
+  const max=Math.max(...top.map(x=>x.total));
+  const step=max>8000?4000:max>4000?2000:max>2000?1000:max>800?400:max>400?200:max>100?100:max>40?20:10;
   const nice=Math.ceil(max/step)*step;
   const sx=v=>left+(W-left-right)*v/nice;
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cost per 100 g, lowest first">`;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Total price, cheapest first, with protein content">`;
   [0,nice/2,nice].forEach(t=>{s+=`<line x1="${sx(t)}" x2="${sx(t)}" y1="4" y2="${H-22}" stroke="var(--line)"/>
     <text x="${sx(t)}" y="${H-6}" text-anchor="middle" font-size="11" fill="var(--muted)">${inr(t)}</text>`});
   top.forEach((x,i)=>{
@@ -304,8 +307,8 @@ function chart(list){
     const sub=x.p.category==="desi"?`${x.p.food} · ${x.pack}`:`${x.p.name}${x.o.flavour!=="Unflavoured"?" · "+x.o.flavour:""}${x.two?" · ×2":""}`;
     s+=`<text x="${left-10}" y="${y+12}" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">${esc(trim(label,L1))}</text>
         <text x="${left-10}" y="${y+25}" text-anchor="end" font-size="10.5" fill="var(--muted)">${esc(trim(sub,L2))}</text>
-        <rect x="${left}" y="${y+3}" width="${Math.max(2,sx(x.per100)-left)}" height="20" rx="4" fill="${i===0?"var(--gold)":"var(--accent)"}" opacity="${i===0?1:.8}"/>
-        <text x="${sx(x.per100)+6}" y="${y+18}" font-size="12.5" font-weight="600" fill="var(--ink)" style="font-variant-numeric:tabular-nums">${inr(x.per100)}</text>`;
+        <rect x="${left}" y="${y+3}" width="${Math.max(2,sx(x.total)-left)}" height="20" rx="4" fill="${x.best?"var(--gold)":"var(--accent)"}" opacity="${x.best?1:.8}"/>
+        <text x="${sx(x.total)+6}" y="${y+18}" font-size="12.5" fill="var(--ink)" style="font-variant-numeric:tabular-nums"><tspan font-weight="600">${inr(x.total)}</tspan>${x.p.protein_per_100g?`<tspan font-weight="800" fill="var(--accent)"> · ${x.p.protein_per_100g}%</tspan>`:""}</text>`;
   });
   return s+"</svg>";
 }
@@ -317,20 +320,21 @@ function flagsFor(x,i){
   if(x.o.third_party) fl.push(`<span class="chip warn">Third-party seller</span>`);
   if(x.o.low_stock) fl.push(`<span class="chip warn">Low stock</span>`);
   if(x.two) fl.push(`<span class="chip plain">Buy two packs</span>`);
-  if(i===0) fl.unshift(`<span class="chip gold">Best value</span>`);
+  if(x.best) fl.unshift(`<span class="chip gold">Best value per gram of ${x.p.category==="creatine"?"creatine":"protein"}</span>`);
+  if(i===0) fl.unshift(`<span class="chip">Cheapest</span>`);
   return fl;
 }
 
 function cheapestWhey(){
   const c=CATS[0], saved={...state.unsweetened};
   state.unsweetened={...saved,size:"1",flavour:"any"};
-  const l=options(c); state.unsweetened=saved; return l[0];
+  const l=options(c); state.unsweetened=saved; return l.find(x=>x.best);
 }
 
 let compared=false;
 function render(){
   const out=document.getElementById("out"); out.innerHTML="";
-  if(!compared){out.innerHTML=`<p class="empty">Tick the products your client wants, choose size and flavour, then tap <strong>Compare prices</strong>.</p>`;return;}
+  if(!compared){out.innerHTML=`<p class="empty">Tick the products you want, choose size and flavour, then tap <strong>Compare prices</strong>.</p>`;return;}
   const pin=document.getElementById("pincode").value.trim();
   const active=CATS.filter(c=>state[c.key].on);
   if(!active.length){out.innerHTML=`<p class="empty">Tick at least one product type above, then tap Compare prices.</p>`;return;}
@@ -338,13 +342,17 @@ function render(){
     const st=state[c.key], list=options(c), unit=c.unit;
     const sec=document.createElement("section"); sec.className="result";
     const sizeLbl=(SIZES[c.sizes].find(s=>s.v===st.size)||{}).l;
-    const head=`<div class="rhead"><h2>${c.label}${sizeLbl&&c.sizes!=="none"?", "+sizeLbl:""}${st.flavour!=="any"?" · "+esc(st.flavour):""}</h2><span class="meta">${list.length} option${list.length===1?"":"s"} · lowest cost per 100 g ${unit} first</span></div>`;
+    const head=`<div class="rhead"><h2>${c.label}${sizeLbl&&c.sizes!=="none"?", "+sizeLbl:""}${st.flavour!=="any"?" · "+esc(st.flavour):""}</h2><span class="meta">${list.length} option${list.length===1?"":"s"} · cheapest first · ${unit} content in bold</span></div>`;
     if(!list.length){sec.innerHTML=head+`<p class="empty">Nothing in this size${st.flavour!=="any"?" and flavour":""} today. Try another size${st.flavour!=="any"?' or "Any flavour"':""}.</p>`;out.appendChild(sec);return;}
     let head2="";
-    const b=list[0];
-    const cheapestTotal=[...list].sort((a,b)=>a.total-b.total)[0];
-    let pick=`<div class="pick"><strong>Best value today:</strong> ${esc(b.p.brand)} ${esc(b.p.name)} (${esc(c.key==="desi"?b.p.food:b.o.flavour)}, ${esc(b.pack)}) on ${b.o.store} at ${inr(b.total)}${b.perSachet?` (${inr(b.perSachet)} per sachet)`:""}. That's ${inr(b.per100)} per 100 g of ${unit}, or about ${inr(b.monthly)} a month for ${st.daily} g a day.`;
-    if(cheapestTotal!==b && c.key!=="desi") pick+=` <span class="meta">Lowest sticker price is ${esc(cheapestTotal.p.brand)} on ${cheapestTotal.o.store} at ${inr(cheapestTotal.total)}, but it gives less ${unit} per rupee.</span>`;
+    const ch=list[0], b=list.find(x=>x.best)||ch;
+    const pc=x=>x.p.protein_per_100g?` <strong class="prot">${x.p.protein_per_100g}% ${unit}</strong>`:"";
+    const nm=x=>`${esc(x.p.brand)} ${esc(x.p.name)} (${esc(c.key==="desi"?x.p.food:x.o.flavour)}, ${esc(x.pack)})`;
+    let pick=`<div class="pick"><strong>Cheapest today:</strong> ${nm(ch)} on ${ch.o.store} at <strong>${inr(ch.total)}</strong>${ch.perSachet?` (${inr(ch.perSachet)} per sachet)`:""} ·${pc(ch)}.`;
+    if(b!==ch) pick+=`<br><strong>Best value per gram of ${unit}:</strong> ${nm(b)} on ${b.o.store} at ${inr(b.total)} ·${pc(b)}, which works out to ${inr(b.per100)} per 100 g of ${unit} (vs ${inr(ch.per100)} for the cheapest).`;
+    else pick+=` It's also the best value per gram of ${unit}: ${inr(b.per100)} per 100 g.`;
+    pick+=` About ${inr(b.monthly)} a month for ${st.daily} g of ${unit} a day.`;
+    if(c.key!=="desi") pick+=` <span class="meta">Higher ${unit} % usually means a higher price; compare the bold % and the ₹ per 100 g ${unit} before you choose.</span>`;
     if(c.key==="desi"){
       const city=pinCity(pin), v=STORES.find(s=>s.v===st.storeView).l;
       let g;
@@ -357,27 +365,27 @@ function render(){
     if(c.key==="desi"){const w=cheapestWhey(); if(w) pick+=` <span class="compare">For comparison, the cheapest unsweetened whey today is ${inr(w.per100)} per 100 g protein. Desi foods also bring carbs and fat, and dals and chana have a less complete protein than whey, soya, eggs or paneer.</span>`;}
     if(st.size==="sachet") pick+=` <span class="meta">Sachets cost more per gram than tubs; they're best as a trial pack or for travel.</span>`;
     pick+=`</div>`;
-    const rows=list.map((x,i)=>{const fl=flagsFor(x,i);return `<tr class="${i===0?"top":""}">
+    const rows=list.map((x,i)=>{const fl=flagsFor(x,i);return `<tr class="${x.best?"top":""}">
         <td class="rank">${i+1}</td>
         <td><div class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</div>
             <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)}${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
             <div class="meta">${x.p.protein_per_100g?x.p.protein_per_100g+" g "+unit+" per 100 g ("+esc(x.p.protein_basis)+")":esc(x.p.protein_basis)}</div>
             ${fl.length?`<div class="flags">${fl.join("")}</div>`:""}</td>
         <td>${esc(x.pack)}${x.perSachet?`<div class="meta">${inr(x.perSachet)} per sachet</div>`:""}</td>
-        <td class="num">${inr(x.total)}</td>
-        <td class="num"><strong>${inr(x.per100)}</strong></td>
-        <td class="num">${inr(x.monthly)}</td>
+        <td class="num"><strong>${inr(x.total)}</strong></td>
+        <td class="num"><strong class="prot">${x.p.protein_per_100g?x.p.protein_per_100g+"%":"–"}</strong></td>
+        <td class="num">${inr(x.per100)}<div class="meta">${inr(x.monthly)}/month</div></td>
         <td>${x.o.store}<div class="meta">${x.o.seller?("Sold by "+esc(x.o.seller)):"Seller shown on store page"}</div></td>
         <td><a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener" aria-label="${esc(buyLink(c,x).label)}">${esc(buyLink(c,x).short)}</a></td></tr>`;}).join("");
-    const cards=list.slice(0,15).map((x,i)=>{const fl=flagsFor(x,i);return `<div class="card${i===0?" top":""}">
-        <div class="row1"><div><span class="rank">${i+1}.</span> <span class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</span></div><div style="text-align:right"><div class="big">${inr(x.per100)}</div><div class="meta" style="font-size:11px">per 100 g ${unit}</div></div></div>
-        <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)} · ${esc(x.pack)}${x.p.protein_per_100g?" · "+x.p.protein_per_100g+"% "+unit:""}${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
+    const cards=list.slice(0,15).map((x,i)=>{const fl=flagsFor(x,i);return `<div class="card${x.best?" top":""}">
+        <div class="row1"><div><span class="rank">${i+1}.</span> <span class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</span></div><div style="text-align:right"><div class="big">${inr(x.total)}</div>${x.p.protein_per_100g?`<div class="prot">${x.p.protein_per_100g}% ${unit}</div>`:""}</div></div>
+        <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)} · ${esc(x.pack)} · <strong style="color:var(--ink)">${inr(x.per100)} per 100 g ${unit}</strong>${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
         ${fl.length?`<div class="flags">${fl.join("")}</div>`:""}
-        <div class="row2"><div><strong>${inr(x.total)}</strong>${x.perSachet?` <span class="meta">(${inr(x.perSachet)}/sachet)</span>`:""} <span class="meta">on ${x.o.store}${x.o.seller?" · "+esc(x.o.seller):""}</span><div class="meta">About ${inr(x.monthly)}/month at ${st.daily} g a day</div></div>
+        <div class="row2"><div>${x.perSachet?`<span class="meta">${inr(x.perSachet)}/sachet · </span>`:""}<span class="meta">on ${x.o.store}${x.o.seller?" · "+esc(x.o.seller):""}</span><div class="meta">About ${inr(x.monthly)}/month at ${st.daily} g a day</div></div>
         <a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener">${esc(buyLink(c,x).short)}</a></div></div>`;}).join("");
     sec.innerHTML=head+head2+pick+`<div class="chart">${chart(list)}</div>
       <div class="cards">${cards}${list.length>15?`<p class="meta">Showing the top 15 of ${list.length}. Open on a wider screen for the full list.</p>`:""}</div>
-      <div class="tablewrap"><table><thead><tr><th>#</th><th>Product</th><th>Pack</th><th class="num">Total price</th><th class="num">₹ per 100 g ${unit}</th><th class="num">Per month</th><th>Store</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="tablewrap"><table><thead><tr><th>#</th><th>Product</th><th>Pack</th><th class="num">Total price</th><th class="num">${unit==="creatine"?"Creatine":"Protein"} %</th><th class="num">₹ per 100 g ${unit}</th><th>Store</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
       ${pin&&c.key!=="desi"?`<p class="meta">Delivering to ${esc(pin)}: enter this pincode on the store page to see the delivery charge and date before paying.</p>`:""}
       ${c.key==="desi"?`<p class="meta">Desi food prices are BigBasket Bengaluru prices and change by city. Protein values are typical values per 100 g as sold.</p>`:""}`;
     out.appendChild(sec);
