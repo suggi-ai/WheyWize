@@ -93,7 +93,7 @@ tr.top td{background:color-mix(in srgb,var(--gold) 9%,transparent)}
 a.buy{display:inline-block;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:7px;padding:4px 10px;white-space:nowrap}
 a.buy:hover{background:var(--accent-soft)}
 .wrap>*{min-width:0}
-.stamp .chip{white-space:normal}
+.stamp .chip,.card .chip{white-space:normal;max-width:100%}
 .empty{color:var(--muted);padding:6px 0}
 .notes{display:grid;gap:10px;font-size:13.5px;color:var(--muted)}
 .notes h3{font-family:var(--display);font-size:15px;color:var(--ink);margin:0}
@@ -148,7 +148,7 @@ a.buy:hover{background:var(--accent-soft)}
     <ul>
       <li>No artificial sweeteners in any protein: nothing with sucralose, acesulfame-K or aspartame. (Flavoured creatine is shown only if you pick it, with its sweetener named.)</li>
       <li>Unsweetened, or sweetened only with stevia, monk fruit, dates or cocoa.</li>
-      <li>Whey means real whey concentrate; creatine means unflavoured creatine monohydrate.</li>
+      <li>Whey means real whey concentrate, or pure whey isolate in its own list; creatine means unflavoured creatine monohydrate.</li>
       <li>Every ingredient list and protein claim is read before a product is listed. Anything we can't confirm stays out.</li>
     </ul>
     <span class="meta">Brand missing? <a href="#why">See why some brands aren't listed</a>.</span>
@@ -176,6 +176,7 @@ a.buy:hover{background:var(--accent-soft)}
 const CATS = [
   {key:"unsweetened", label:"Unsweetened whey", what:"Whey concentrate, no sweetener at all", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"natural", label:"Naturally sweetened whey", what:"Stevia, monk fruit, dates or cocoa. No sucralose", unit:"protein", daily:30, sizes:"protein", on:false},
+  {key:"isolate", label:"Whey isolate", what:"Pure whey isolate (about 85–90% protein), unflavoured. Easier on lactose", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"yeast", label:"Yeast protein", what:"Fermented yeast protein, plant-based", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"creatine", label:"Creatine monohydrate", what:"Unflavoured only. Creapure marked separately", unit:"creatine", daily:3, sizes:"creatine", on:false},
   {key:"desi", label:"Desi protein foods", what:"Soya, dal, sattu, chana, peanuts, paneer, eggs. Check your local store", unit:"protein", daily:30, sizes:"none", on:false}
@@ -367,7 +368,7 @@ function render(){
         <td class="num"><strong>${inr(x.per100)}</strong></td>
         <td class="num">${inr(x.monthly)}</td>
         <td>${x.o.store}<div class="meta">${x.o.seller?("Sold by "+esc(x.o.seller)):"Seller shown on store page"}</div></td>
-        <td><a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener">${esc(buyLink(c,x).label)}</a></td></tr>`;}).join("");
+        <td><a class="buy" href="${esc(buyLink(c,x).url)}" target="_blank" rel="noopener" aria-label="${esc(buyLink(c,x).label)}">${esc(buyLink(c,x).short)}</a></td></tr>`;}).join("");
     const cards=list.slice(0,15).map((x,i)=>{const fl=flagsFor(x,i);return `<div class="card${i===0?" top":""}">
         <div class="row1"><div><span class="rank">${i+1}.</span> <span class="pname">${esc(x.p.brand)} ${esc(x.p.name)}</span></div><div style="text-align:right"><div class="big">${inr(x.per100)}</div><div class="meta" style="font-size:11px">per 100 g ${unit}</div></div></div>
         <div class="meta">${esc(c.key==="desi"?x.p.food:x.o.flavour)} · ${esc(x.pack)}${x.p.protein_per_100g?" · "+x.p.protein_per_100g+"% "+unit:""}${c.key==="desi"?"":" · Sweetener: "+esc(x.p.sweetener)}</div>
@@ -396,7 +397,7 @@ function renderMeta(){
       <p>WheyWize only lists a product when it passes all of these checks:</p>
       <ul>
         <li><strong>No artificial sweeteners.</strong> Sucralose (INS 955), acesulfame-K (INS 950) and aspartame (INS 951) rule a product out, however popular the brand.</li>
-        <li><strong>Whey concentrate, not a cheap blend.</strong> Blends padded with whey powder, isolate or yeast are left out unless they're clearly marked.</li>
+        <li><strong>Real whey, not a cheap blend.</strong> Concentrates and pure isolates are listed separately. Blends padded with whey powder or yeast are left out unless they're clearly marked.</li>
         <li><strong>The label must be readable.</strong> We need the ingredient list and the protein per scoop and scoop size (or per 100 g). If a listing hides these, the product stays out until it doesn't.</li>
         <li><strong>Sold in India by the brand or a major store.</strong> Listings from small third-party sellers are flagged.</li>
       </ul>

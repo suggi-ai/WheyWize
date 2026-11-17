@@ -2828,6 +2828,301 @@
      "third_party": true
     }
    ]
+  },
+  {
+   "id": "isopure-zero-carb-unflav",
+   "category": "isolate",
+   "brand": "Isopure",
+   "name": "Zero Carb 100% Whey Isolate",
+   "protein_per_100g": 86,
+   "protein_basis": "25 g protein per 29 g scoop (about 35 servings per 1 kg); ingredients: whey protein isolate, soy lecithin",
+   "sweetener": "None",
+   "flags": [
+    "Unflavoured only (Isopure flavours use sucralose)"
+   ],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 7999,
+     "seller": "RK World Infocom",
+     "url": "https://www.amazon.in/dp/B0D17K39TW",
+     "third_party": true
+    }
+   ]
+  },
+  {
+   "id": "twt-wpi",
+   "category": "isolate",
+   "brand": "The Whole Truth",
+   "name": "Whey Protein Isolate",
+   "protein_per_100g": 85,
+   "protein_basis": "30.4 g protein per scoop, 28 scoops per 1 kg; ingredients: instantised whey isolate + digestive enzyme",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 6199,
+     "seller": "The Whole Truth",
+     "url": "https://www.amazon.in/dp/B0CLCB1XCH"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 3209,
+     "seller": "The Whole Truth",
+     "url": "https://www.amazon.in/dp/B0HDT16M9Z"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 0.175,
+     "flavour": "Unflavoured",
+     "price": 1229,
+     "seller": "The Whole Truth",
+     "url": "https://www.amazon.in/dp/B0HN72V715",
+     "kind": "sachet",
+     "sachet_count": 5,
+     "sachet_g": 35
+    }
+   ]
+  },
+  {
+   "id": "wellbeing-clean-wpi",
+   "category": "isolate",
+   "brand": "Wellbeing Nutrition",
+   "name": "Clean Whey Protein Isolate",
+   "protein_per_100g": 87,
+   "protein_basis": "31 g protein per scoop, 28 scoops per 1 kg; whey isolate, sunflower lecithin, enzymes, probiotics",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 7199,
+     "seller": "Nutritionalab (brand)",
+     "url": "https://www.amazon.in/dp/B0DMNVJXMW"
+    }
+   ]
+  },
+  {
+   "id": "nakpro-platinum-raw-wpi",
+   "category": "isolate",
+   "brand": "Nakpro",
+   "name": "Platinum Raw Whey Isolate",
+   "protein_per_100g": 88,
+   "protein_basis": "30 g protein per 34 g scoop (brand); ingredient: whey protein isolate; Trustified certified",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "nakpro.com",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 2274,
+     "seller": "Nakpro (brand)",
+     "url": "https://nakpro.com/products/raw-platinum-whey-protein-isolate?variant=41989029822544"
+    },
+    {
+     "store": "nakpro.com",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 4449,
+     "seller": "Nakpro (brand)",
+     "url": "https://nakpro.com/products/raw-platinum-whey-protein-isolate?variant=41989029855312"
+    },
+    {
+     "store": "nakpro.com",
+     "size_kg": 2,
+     "flavour": "Unflavoured",
+     "price": 8798,
+     "seller": "Nakpro (brand)",
+     "url": "https://nakpro.com/products/raw-platinum-whey-protein-isolate?variant=41989029888080"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 4464,
+     "seller": "NAKPRO Nutrition",
+     "url": "https://www.amazon.in/dp/B0793S1K16"
+    }
+   ]
+  },
+  {
+   "id": "asitis-one-wpi",
+   "category": "isolate",
+   "brand": "AS-IT-IS",
+   "name": "ONE Whey Protein Isolate 90%",
+   "protein_per_100g": 88,
+   "protein_basis": "30 g protein per serving; brand states 90% isolate (estimated about 88 g per 100 g as sold); ingredient: whey protein isolate",
+   "sweetener": "None",
+   "flags": [
+    "Protein per 100 g estimated"
+   ],
+   "offers": [
+    {
+     "store": "asitisnutrition.com",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 2349,
+     "seller": "AS-IT-IS (brand)",
+     "url": "https://asitisnutrition.com/products/buy-whey-protein-isolate?variant=7381046198323"
+    },
+    {
+     "store": "asitisnutrition.com",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 4613,
+     "seller": "AS-IT-IS (brand)",
+     "url": "https://asitisnutrition.com/products/buy-whey-protein-isolate?variant=7661095190579"
+    },
+    {
+     "store": "asitisnutrition.com",
+     "size_kg": 2,
+     "flavour": "Unflavoured",
+     "price": 8979,
+     "seller": "AS-IT-IS (brand)",
+     "url": "https://asitisnutrition.com/products/buy-whey-protein-isolate?variant=31473977131059"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 2,
+     "flavour": "Unflavoured",
+     "price": 8979,
+     "seller": "My Nutra Mart",
+     "url": "https://www.amazon.in/dp/B0837M2SBL",
+     "third_party": true
+    }
+   ]
+  },
+  {
+   "id": "truebasics-clean-raw-wpi",
+   "category": "isolate",
+   "brand": "TrueBasics",
+   "name": "Clean Raw Whey Isolate",
+   "protein_per_100g": 90,
+   "protein_basis": "27 g protein per 30 g scoop; whey protein isolate instantised with sunflower lecithin",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 5699,
+     "seller": "Bright Lifecare (brand)",
+     "url": "https://www.amazon.in/dp/B0GKGT798X"
+    }
+   ]
+  },
+  {
+   "id": "mb-clean-raw-wpi",
+   "category": "isolate",
+   "brand": "MuscleBlaze",
+   "name": "100% Clean Raw Whey Isolate",
+   "protein_per_100g": 90,
+   "protein_basis": "27 g protein per 30 g scoop; single ingredient: whey protein isolate",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 2899,
+     "seller": "Bright Lifecare (brand)",
+     "url": "https://www.amazon.in/dp/B0953F26ZZ"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 2,
+     "flavour": "Unflavoured",
+     "price": 11099,
+     "seller": "Bright Lifecare (brand)",
+     "url": "https://www.amazon.in/dp/B08L125CB5"
+    }
+   ]
+  },
+  {
+   "id": "tata1mg-wpi",
+   "category": "isolate",
+   "brand": "Tata 1mg",
+   "name": "Whey Protein Isolate",
+   "protein_per_100g": 88,
+   "protein_basis": "30 g protein per 34 g serving; no flavours, sweeteners or thickeners (listing); with DigeZyme enzymes",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 5194,
+     "seller": "TATA 1MG",
+     "url": "https://www.amazon.in/dp/B0H6XSRGX7"
+    }
+   ]
+  },
+  {
+   "id": "muscle-nectar-raw-wpc",
+   "category": "unsweetened",
+   "brand": "Muscle Nectar",
+   "name": "Raw Whey Protein Concentrate",
+   "protein_per_100g": 80,
+   "protein_basis": "24 g protein per 30 g serving (listing); ingredient: whey protein",
+   "sweetener": "None",
+   "flags": [
+    "New on WheyWize"
+   ],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 1499,
+     "seller": "Muscle Nectar",
+     "url": "https://www.amazon.in/dp/B0HJ8FFZFR"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 2899,
+     "seller": "Muscle Nectar",
+     "url": "https://www.amazon.in/dp/B08VJJCPBR",
+     "pack_note": "with digestive enzymes"
+    }
+   ]
+  },
+  {
+   "id": "funclab-wpc",
+   "category": "natural",
+   "brand": "The Func. Lab",
+   "name": "Grass-Fed Whey Concentrate",
+   "protein_per_100g": 71,
+   "protein_basis": "25 g protein per 35 g scoop (listing)",
+   "sweetener": "Monk fruit + stevia",
+   "flags": [
+    "New brand (2025)",
+    "Sold as 'Unflavoured' but the ingredient list names monk fruit and stevia"
+   ],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured (lightly sweetened)",
+     "price": 3999,
+     "seller": "Func Lab (brand)",
+     "url": "https://www.amazon.in/dp/B0FP913B3N"
+    }
+   ]
   }
  ],
  "excluded": [
@@ -2932,10 +3227,6 @@
    "reason": "Listing claims 26 g protein per serving but gives no serving size or ingredient list (and describes the protein as plant-derived), so it can't be checked or ranked yet."
   },
   {
-   "brand": "Muscle Nectar Raw Whey Protein (Unflavoured)",
-   "reason": "Ingredients read (whey protein), but protein per serving and serving size aren't stated on the listing."
-  },
-  {
    "brand": "Fast&Up Yeast Protein (Unflavoured)",
    "reason": "26 g protein per serving claimed, but the ingredient list and serving size couldn't be read from the listing."
   },
@@ -2950,6 +3241,30 @@
   {
    "brand": "Pink Harvest Farms Lean Clean Yeast Protein",
    "reason": "Ingredients read (fermented yeast protein only), but the serving size isn't stated (listing gives 31 g protein per serving), so protein per 100 g can't be worked out; also a small, newer brand."
+  },
+  {
+   "brand": "Isopure flavoured (Low Carb, Zero Carb flavours)",
+   "reason": "Use sucralose (INS 955). Isopure Unflavoured is listed under Whey isolate."
+  },
+  {
+   "brand": "MyProtein Impact Whey Isolate",
+   "reason": "Flavoured versions use sucralose."
+  },
+  {
+   "brand": "MuscleBlaze Biozyme Iso-Zero",
+   "reason": "Ingredients only shown as a label image; not confirmed."
+  },
+  {
+   "brand": "Elevate Whey Concentrate (new)",
+   "reason": "Sold as concentrate but the listing describes an isolate + concentrate blend, and serving size isn't stated."
+  },
+  {
+   "brand": "True Protein Clean Whey (new)",
+   "reason": "Stevia-sweetened isolate + concentrate blend; serving size not stated."
+  },
+  {
+   "brand": "FUELLED Raw Whey, Provance, KiloBeaters, Absolute Nutrition Alpha (new)",
+   "reason": "Ingredient list or sweetener not shown on the listing."
   }
  ]
 }
