@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-16T16:54:04+05:30",
+ "checked_at": "2026-11-17T10:54:54+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
@@ -422,7 +422,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3799,
+     "price": 3794,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0FFHB9B6Q"
     },
@@ -491,7 +491,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3428,
+     "price": 3379,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730409"
     },
@@ -499,7 +499,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 6799,
+     "price": 6549,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730410"
     },
@@ -1011,7 +1011,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Light Cocoa",
-     "price": 4364,
+     "price": 4119,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730403"
     },
@@ -1019,7 +1019,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Light Cocoa",
-     "price": 8649,
+     "price": 7849,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730404"
     },
@@ -1087,7 +1087,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2146,
+     "price": 2147,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1389,7 +1389,8 @@
      "url": "https://www.amazon.in/dp/B0H6FHVCZW",
      "kind": "sachet",
      "sachet_count": 3,
-     "sachet_g": 38
+     "sachet_g": 38,
+     "low_stock": true
     }
    ]
   },
@@ -1497,7 +1498,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2100,
+     "price": 2300,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0H7SBVVWM",
      "third_party": false,
@@ -1521,7 +1522,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 1900,
+     "price": 2100,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0H7SGY8P5",
      "third_party": false,
@@ -1613,7 +1614,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 493,
+     "price": 444,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B07WN552H2"
     },
@@ -1764,9 +1765,8 @@
      "size_kg": 0.15,
      "flavour": "Unflavoured",
      "price": 499,
-     "seller": "MYTHANGLORYRetail",
-     "url": "https://www.flipkart.com/nutrabay-pure-micronised-creatine-monohydrate-pre-post-workout-supplement-150-gram/p/itm3c3b14cf24ac8?pid=PSLH9HH8DTU5TS5Z",
-     "third_party": true
+     "seller": "NUTRABAYRETAIL",
+     "url": "https://www.flipkart.com/nutrabay-pure-micronised-creatine-monohydrate-pre-post-workout-supplement-150-gram/p/itm3c3b14cf24ac8?pid=PSLH9HH8DTU5TS5Z"
     }
    ],
    "flavoured": false
@@ -2411,7 +2411,7 @@
      "store": "BigBasket",
      "size_kg": 0.5,
      "flavour": "Moong dal",
-     "price": 100,
+     "price": 79,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/30007756/tata-sampann-unpolished-moong-dal-split-500-g-pouch/"
     }
@@ -2587,7 +2587,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 231,
+     "price": 269,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2611,7 +2611,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 311,
+     "price": 405.5,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -3265,6 +3265,22 @@
   {
    "brand": "FUELLED Raw Whey, Provance, KiloBeaters, Absolute Nutrition Alpha (new)",
    "reason": "Ingredient list or sweetener not shown on the listing."
+  },
+  {
+   "brand": "Only What's Needed Whey Protein Isolate, Cocoa (new)",
+   "reason": "Sold as an isolate but the ingredient list says whey protein concentrate (90.48%) with cocoa and stevia, and the scoop size isn't stated, so it can't be classified or ranked yet."
+  },
+  {
+   "brand": "Naturaltein Whey Protein Isolate, Pista Kulfi (new)",
+   "reason": "Stevia + thaumatin, but it's a flavoured isolate (not a concentrate) and the serving size isn't stated (only 30 g protein per serving)."
+  },
+  {
+   "brand": "Naturaltein Whey ISO Boost (new)",
+   "reason": "Isolate-dominated isolate + concentrate blend; full ingredient list and serving size not shown on the listing."
+  },
+  {
+   "brand": "Muscle Asylum Raw Whey, FUELONE Yeast Protein, Weoliv Vector, Trumax 100% Whey (new on Flipkart)",
+   "reason": "Weoliv and Trumax are isolate + concentrate blends; Muscle Asylum and FUELONE are smaller brands whose ingredients and serving size weren't confirmed this run."
   }
  ]
 }
