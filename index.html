@@ -120,6 +120,16 @@ a.buy:hover{background:var(--accent-soft)}
   button#go{width:100%;padding:12px}
 }
 @media (prefers-reduced-motion: no-preference){ .result{animation:in .25s ease-out both} @keyframes in{from{transform:translateY(4px)}to{transform:none}} }
+.herorow{display:flex;flex-direction:row-reverse;gap:18px;align-items:center;justify-content:space-between}
+.herotext{display:grid;gap:6px;min-width:0}
+.hero{width:190px;flex:none}
+.feats{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.feats li{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px 4px 8px;font-size:13px;font-weight:600;color:var(--ink)}
+.feats svg,.ico,.cico{width:18px;height:18px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ico{width:20px;height:20px;vertical-align:-4px}
+.cico{width:22px;height:22px}
+.row.off .cico{stroke:var(--muted)}
+@media (max-width:640px){.herorow{display:block}.herotext{display:block}.herotext>*{margin-top:6px}.herotext>h1{margin-top:0}.hero{float:right;width:104px;margin:-4px 0 4px 10px}.feats{clear:both;padding-top:2px}.feats li{font-size:12px;padding:3px 9px 3px 7px}}
 </style>
 <style>
 .tagline{margin:-2px 0 2px;font-family:var(--display);font-weight:800;font-size:clamp(17px,2.6vw,21px);color:var(--accent);letter-spacing:.01em}
@@ -140,14 +150,48 @@ a.buy:hover{background:var(--accent-soft)}
 <body>
 <div class="wrap">
   <header>
+    <div class="herorow"><svg class="hero" viewBox="0 0 200 170" role="img" aria-label="Protein tub, shaker and dumbbell">
+      <ellipse cx="100" cy="160" rx="88" ry="7" fill="var(--line)" opacity=".7"/>
+      <!-- tub -->
+      <rect x="38" y="30" width="84" height="18" rx="5" fill="var(--ink)"/>
+      <path d="M42 48h76l-5 102a8 8 0 0 1-8 7H55a8 8 0 0 1-8-7z" fill="var(--accent)"/>
+      <path d="M44 72h72v44H46z" fill="var(--paper)"/>
+      <path d="M80 78l14 5v10c0 8-6 13-14 15-8-2-14-7-14-15V83z" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M73 93l5 5 9-10" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="80" y="134" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="11" fill="var(--paper)" letter-spacing="1">CLEAN</text>
+      <!-- leaf -->
+      <path d="M112 34c10-14 26-16 34-14-2 10-12 22-30 20z" fill="var(--gold)"/>
+      <path d="M116 38c8-6 16-10 24-14" stroke="var(--paper)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <!-- shaker -->
+      <rect x="140" y="62" width="34" height="10" rx="3" fill="var(--ink)"/>
+      <rect x="152" y="54" width="10" height="9" rx="2" fill="var(--ink)"/>
+      <path d="M141 72h32l-4 82a5 5 0 0 1-5 4h-14a5 5 0 0 1-5-4z" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M143 104h28l-2.6 50a5 5 0 0 1-5 4h-14a5 5 0 0 1-5-4z" fill="var(--gold)" opacity=".55"/>
+      <path d="M146 88h8M146 96h5" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"/>
+      <!-- dumbbell -->
+      <g transform="translate(6 132) rotate(-14)">
+        <rect x="0" y="4" width="9" height="22" rx="2.5" fill="var(--ink)"/>
+        <rect x="9" y="8" width="6" height="14" rx="2" fill="var(--ink)"/>
+        <rect x="15" y="13" width="26" height="4" rx="2" fill="var(--muted)"/>
+      </g>
+    </svg><div class="herotext">
     <h1>WheyWize</h1>
     <p class="tagline">Choose Clean, Chosen by Fitness Doctor</p>
     <p class="sub">Pick what you want. Each list runs from the cheapest pack to the costliest, with the <strong>protein content in bold</strong> beside every price. Higher-protein products often cost more, so the <strong>₹ per 100 g protein</strong> figure shows what you really pay for the protein.</p>
+    <ul class="feats">
+      <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Every label read</li>
+      <li><svg viewBox="0 0 24 24"><path d="M4 18h16M7 15V9M12 15V6M17 15v-3"/></svg>Cheapest first</li>
+      <li><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></svg>Prices checked daily</li>
+      <li><svg viewBox="0 0 24 24"><path d="M6 7v10M3 9.5v5M18 7v10M21 9.5v5M6 12h12"/></svg>Made for lifters</li>
+    </ul>
+    </div>
+    
+    </div>
     <div class="stamp" id="stamp"><span class="chip plain">Loading prices…</span></div>
   </header>
 
   <section class="usp" aria-label="What WheyWize compares">
-    <strong class="t">Clean-label products only</strong>
+    <strong class="t"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg> Clean-label products only</strong>
     <ul>
       <li>No artificial sweeteners in any protein: nothing with sucralose, acesulfame-K or aspartame. (Flavoured creatine is shown only if you pick it, with its sweetener named.)</li>
       <li>Unsweetened, or sweetened only with stevia, monk fruit, dates or cocoa.</li>
@@ -177,6 +221,7 @@ a.buy:hover{background:var(--accent-soft)}
 </div>
 
 <script>
+const ICONS={"unsweetened": "<rect x=\"5\" y=\"3.5\" width=\"14\" height=\"4\" rx=\"1.2\"/><path d=\"M6 7.5h12l-1 12.2a1.3 1.3 0 0 1-1.3 1.3H8.3A1.3 1.3 0 0 1 7 19.7z\"/><path d=\"M9.5 13h5\"/>", "natural": "<rect x=\"5\" y=\"3.5\" width=\"14\" height=\"4\" rx=\"1.2\"/><path d=\"M6 7.5h12l-1 12.2a1.3 1.3 0 0 1-1.3 1.3H8.3A1.3 1.3 0 0 1 7 19.7z\"/><path d=\"M9.5 16.5c0-2.6 2-4.5 5-4.5 0 2.6-2 4.5-5 4.5zM9.5 16.5l2.5-2\"/>", "isolate": "<rect x=\"5\" y=\"3.5\" width=\"14\" height=\"4\" rx=\"1.2\"/><path d=\"M6 7.5h12l-1 12.2a1.3 1.3 0 0 1-1.3 1.3H8.3A1.3 1.3 0 0 1 7 19.7z\"/><path d=\"M12 10.5s-2.6 3-2.6 4.7a2.6 2.6 0 0 0 5.2 0c0-1.7-2.6-4.7-2.6-4.7z\"/>", "yeast": "<circle cx=\"9\" cy=\"10\" r=\"4.5\"/><circle cx=\"16\" cy=\"15\" r=\"3.5\"/><circle cx=\"16.5\" cy=\"6.5\" r=\"2\"/><circle cx=\"8\" cy=\"18.5\" r=\"1.5\"/>", "creatine": "<path d=\"M2.5 12h11a5.5 5.5 0 0 1-11 0z\"/><path d=\"M13.5 12.8l8-3.3\"/><path d=\"M5 9.5l1-1M8 8.5v-1.5M11 9.5l-1-1\"/>", "desi": "<path d=\"M3 12.5h18a9 6.5 0 0 1-18 0z\"/><ellipse cx=\"9.5\" cy=\"8.6\" rx=\"2.4\" ry=\"3\"/><path d=\"M14 10.5c.5-2 2-3 4-3\"/>"};
 const CATS = [
   {key:"unsweetened", label:"Unsweetened whey", what:"Whey concentrate, no sweetener at all", unit:"protein", daily:30, sizes:"protein", on:false},
   {key:"natural", label:"Naturally sweetened whey", what:"Stevia, monk fruit, dates or cocoa. No sucralose", unit:"protein", daily:30, sizes:"protein", on:false},
@@ -237,7 +282,7 @@ function buildRows(){
     div.className="row"+(st.on?"":" off");
     const sz=SIZES[c.sizes];
     div.innerHTML=`
-      <label class="inc" for="on-${c.key}"><input type="checkbox" id="on-${c.key}" ${st.on?"checked":""}> ${c.label}</label>
+      <label class="inc" for="on-${c.key}"><input type="checkbox" id="on-${c.key}" ${st.on?"checked":""}><svg class="cico" viewBox="0 0 24 24" aria-hidden="true">${ICONS[c.key]||""}</svg>${c.label}</label>
       <p class="what">${c.what}</p>
       ${sz.length?`<div class="seg" role="radiogroup" aria-label="${c.label} size">${sz.map(s=>`<input type="radio" name="size-${c.key}" id="s-${c.key}-${s.v}" value="${s.v}" ${st.size===s.v?"checked":""}><label for="s-${c.key}-${s.v}">${s.l}</label>`).join("")}</div>`:""}
       ${c.key==="desi"?`<div class="field"><span>Shop on</span><div class="seg" role="radiogroup" aria-label="Store">${STORES.map(s=>`<input type="radio" name="store-desi" id="st-${s.v}" value="${s.v}" ${st.storeView===s.v?"checked":""}><label for="st-${s.v}">${s.l}</label>`).join("")}</div></div>`:""}
