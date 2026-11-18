@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-17T10:54:54+05:30",
+ "checked_at": "2026-11-17T19:09:00+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
@@ -1087,7 +1087,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2147,
+     "price": 2099,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1096,7 +1096,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Cold Coffee",
-     "price": 2399,
+     "price": 2249,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FKBD3P62",
      "third_party": false
@@ -1237,7 +1237,7 @@
      "store": "livemille.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 5549,
+     "price": 5099,
      "seller": "Mille (brand)",
      "url": "https://livemille.com/products/unflavoured-protein?variant=50595783704773"
     },
@@ -1870,7 +1870,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 290,
+     "price": 289,
      "seller": "TATA 1MG",
      "url": "https://www.amazon.in/dp/B0F3DHR82W"
     },
@@ -2242,7 +2242,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 479,
+     "price": 523,
      "seller": "Wellbeing Nutrition (brand)",
      "url": "https://www.amazon.in/dp/B0DMVS533L"
     }
@@ -2308,6 +2308,27 @@
      "price": 629,
      "seller": "Nutrova (brand)",
      "url": "https://www.amazon.in/dp/B0GXT2J7N8"
+    }
+   ],
+   "flavoured": false
+  },
+  {
+   "id": "cr-fastup",
+   "category": "creatine",
+   "brand": "Fast&Up",
+   "name": "Creatine Monohydrate (Micronized)",
+   "protein_per_100g": 100,
+   "protein_basis": "3 g creatine per scoop; ingredients: creatine only (listing)",
+   "sweetener": "None (unflavoured)",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 0.1,
+     "flavour": "Unflavoured",
+     "price": 470,
+     "seller": "FAST&UP (brand)",
+     "url": "https://www.amazon.in/dp/B0DSC7T6BV"
     }
    ],
    "flavoured": false
@@ -2587,7 +2608,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 269,
+     "price": 259,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2611,7 +2632,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 405.5,
+     "price": 408.59,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -3281,6 +3302,18 @@
   {
    "brand": "Muscle Asylum Raw Whey, FUELONE Yeast Protein, Weoliv Vector, Trumax 100% Whey (new on Flipkart)",
    "reason": "Weoliv and Trumax are isolate + concentrate blends; Muscle Asylum and FUELONE are smaller brands whose ingredients and serving size weren't confirmed this run."
+  },
+  {
+   "brand": "HealthyHey Nutrition Fermented Yeast Protein (new)",
+   "reason": "Listing description says it is sweetened with sucralose (INS 955) and stevia."
+  },
+  {
+   "brand": "MyFitFuel Fermented Yeast Protein, Unflavoured (new)",
+   "reason": "25 g protein per serving claimed, but the ingredient list and serving size couldn't be read from the listing."
+  },
+  {
+   "brand": "Shyft Fermented Yeast Protein, Unflavoured (new)",
+   "reason": "24 g protein per scoop claimed, but the ingredient list and scoop size aren't stated on the listing."
   }
  ]
 }
