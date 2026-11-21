@@ -1,15 +1,11 @@
 {
- "checked_at": "2026-11-19T16:57:00+05:30",
+ "checked_at": "2026-11-20T18:47:00+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
-  "Brand websites",
-  "HealthKart",
-  "Nutrabay",
-  "Tata 1mg",
-  "BigBasket"
+  "Brand websites"
  ],
- "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. Flipkart low-stock flags are carried over from the last check.",
+ "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. Flipkart low-stock flags are carried over from the last check. This check re-read Amazon.in, Flipkart and the brand websites (Nakpro, AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics yeast). HealthKart, Nutrabay, Tata 1mg, BigBasket and the TrueBasics whey page were not re-checked this time (browser connection dropped); their prices are from the 20 Nov 2026 4:17 pm check.",
  "products": [
   {
    "id": "nakpro-perform",
@@ -434,7 +430,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3794,
+     "price": 3799,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0FFHB9B6Q"
     },
@@ -503,7 +499,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3379,
+     "price": 3854,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730409"
     },
@@ -511,7 +507,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 6549,
+     "price": 7549,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730410"
     },
@@ -655,7 +651,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 6490,
+     "price": 8198,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/whey-protein-concentrate?variant=42639855124563",
      "pack_note": "2 × 1 kg"
@@ -863,7 +859,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Chocolate",
-     "price": 5699,
+     "price": 6798,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/the-whey-protein?variant=42640120021075",
      "pack_note": "2 × 1 kg boxes"
@@ -880,7 +876,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Coffee",
-     "price": 5699,
+     "price": 6798,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/the-whey-protein?variant=42640120119379",
      "pack_note": "2 × 1 kg boxes"
@@ -897,7 +893,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Vanilla",
-     "price": 5699,
+     "price": 6798,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/the-whey-protein?variant=42640120086611",
      "pack_note": "2 × 1 kg boxes"
@@ -914,7 +910,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Pista Kulfi",
-     "price": 5699,
+     "price": 6798,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/the-whey-protein?variant=42640119955539",
      "pack_note": "2 × 1 kg boxes"
@@ -931,7 +927,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Rose Kulfi",
-     "price": 5699,
+     "price": 6798,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/the-whey-protein?variant=42640120053843",
      "pack_note": "2 × 1 kg boxes"
@@ -984,7 +980,7 @@
      "store": "naturaltein.in",
      "size_kg": 2,
      "flavour": "Chocolate",
-     "price": 6490,
+     "price": 8198,
      "seller": "Naturaltein (brand)",
      "url": "https://naturaltein.in/products/whey-protein-concentrate?variant=42639855157331",
      "pack_note": "2 × 1 kg boxes"
@@ -1023,7 +1019,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Light Cocoa",
-     "price": 4119,
+     "price": 4445,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730403"
     },
@@ -1031,7 +1027,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Light Cocoa",
-     "price": 7849,
+     "price": 8719,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730404"
     },
@@ -1078,7 +1074,7 @@
      "store": "superyou.in",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 1799,
+     "price": 2099,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/unflavoured-1-kg-fermented-yeast-protein?variant=50313999843618"
     },
@@ -1086,7 +1082,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 3599,
+     "price": 3999,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/unflavoured-fermented-yeast-protein-1kg-jar-x-2?variant=67413683896610",
      "pack_note": "2 × 1 kg jars"
@@ -1107,7 +1103,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2099,
+     "price": 2249,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1125,7 +1121,7 @@
      "store": "superyou.in",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 1999,
+     "price": 2349,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/chocolate-protein-powder?variant=50150697140514"
     },
@@ -1133,7 +1129,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Chocolate",
-     "price": 3899,
+     "price": 4399,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/chocolate-fermented-yeast-protein-1kg-jar-x-2?variant=67413509931298",
      "pack_note": "2 × 1 kg jars"
@@ -1142,7 +1138,7 @@
      "store": "superyou.in",
      "size_kg": 1,
      "flavour": "Cold Coffee",
-     "price": 1999,
+     "price": 2349,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/coffee-protein-powder?variant=50155875041570"
     },
@@ -1150,7 +1146,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Cold Coffee",
-     "price": 3899,
+     "price": 4399,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/cold-coffee-fermented-yeast-protein-1kg-jar-x-2?variant=67413529788706",
      "pack_note": "2 × 1 kg jars"
@@ -1249,7 +1245,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1615,
+     "price": 1519,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0FL7GR4RK"
     },
@@ -1735,8 +1731,8 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 276,
-     "seller": "RK World Infocom",
+     "price": 379,
+     "seller": "Nutrabay (brand)",
      "url": "https://www.amazon.in/dp/B09VP6HL5J"
     },
     {
@@ -2052,7 +2048,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 439,
+     "price": 399,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0B97JMMK4"
     },
@@ -2500,7 +2496,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Sattu",
-     "price": 166.8,
+     "price": 147,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40046733/bb-royal-sattu-atta-1-kg/"
     }
@@ -2542,7 +2538,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Roasted chana",
-     "price": 186.24,
+     "price": 175,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40128951/bb-royal-fried-gram-whole-1-kg/"
     },
@@ -2634,7 +2630,7 @@
      "store": "BigBasket",
      "size_kg": 0.2,
      "flavour": "Paneer",
-     "price": 115,
+     "price": 104,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/270620/nandini-paneer-200-g-pouch/"
     }
@@ -2679,7 +2675,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 408.59,
+     "price": 352,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -2913,10 +2909,10 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 7999,
+     "price": 6959,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0D17K39TW",
-     "third_party": true
+     "third_party": false
     }
    ]
   },
@@ -3081,18 +3077,10 @@
    "flags": [],
    "offers": [
     {
-     "store": "Amazon",
-     "size_kg": 1,
-     "flavour": "Unflavoured",
-     "price": 5699,
-     "seller": "Bright Lifecare (brand)",
-     "url": "https://www.amazon.in/dp/B0GKGT798X"
-    },
-    {
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 5699,
+     "price": 6199,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.flipkart.com/truebasics-clean-raw-whey-isolate-protein-powder-27g-per-scoop/p/itm954259529a446?pid=PSLHK6AUWXZCFG8W"
     }
