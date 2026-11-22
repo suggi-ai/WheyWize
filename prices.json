@@ -1,11 +1,15 @@
 {
- "checked_at": "2026-11-20T18:47:00+05:30",
+ "checked_at": "2026-11-21T19:04:00+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
-  "Brand websites"
+  "Brand websites",
+  "HealthKart",
+  "Nutrabay",
+  "Tata 1mg",
+  "BigBasket"
  ],
- "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. Flipkart low-stock flags are carried over from the last check. This check re-read Amazon.in, Flipkart and the brand websites (Nakpro, AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics yeast). HealthKart, Nutrabay, Tata 1mg, BigBasket and the TrueBasics whey page were not re-checked this time (browser connection dropped); their prices are from the 20 Nov 2026 4:17 pm check.",
+ "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. Flipkart low-stock flags are carried over from the last check. This check re-read every store: Amazon.in, Flipkart, the brand websites (Nakpro, AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket.",
  "products": [
   {
    "id": "nakpro-perform",
@@ -29,7 +33,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2199,
+     "price": 2089,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-100-perform-concentrate-24-7g-protein-5-7g-bcaa-whey-protein/p/itm4621f08fbdd8c?pid=PSLFN3HBVDRUGJZK",
      "third_party": true
@@ -54,7 +58,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1149,
+     "price": 1159,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B09Z28BFJB"
     },
@@ -1065,7 +1069,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2199,
+     "price": 2099,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FLDZD6BW",
      "third_party": false
@@ -1103,7 +1107,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2249,
+     "price": 2105,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1112,7 +1116,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Cold Coffee",
-     "price": 2249,
+     "price": 2199,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FKBD3P62",
      "third_party": false
@@ -1320,7 +1324,7 @@
      "store": "Flipkart",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1099,
+     "price": 999,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/yogabar-fermented-31g-protein-powderpdcaas-1absorption-no-bloating-gut-friendly-yeast/p/itm461f1cc27f975?pid=PSLHZHWQDGMNGDS8",
      "third_party": true
@@ -1333,6 +1337,14 @@
      "seller": "Yogabar",
      "url": "https://www.amazon.in/dp/B0HNDGWXCJ",
      "pack_note": "4 × 500 g"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 0.5,
+     "flavour": "Unflavoured",
+     "price": 1104,
+     "seller": "Yogabar",
+     "url": "https://www.amazon.in/dp/B0H5BZQY2K"
     }
    ]
   },
@@ -1367,7 +1379,7 @@
      "store": "Flipkart",
      "size_kg": 0.5,
      "flavour": "Chocolate",
-     "price": 1099,
+     "price": 999,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/yogabar-fermented-26g-protein-powderpdcaas-1absorption-no-bloating-gut-friendly-yeast/p/itm5b9950f31ea29?pid=PSLHZHWQN6MCZBCW",
      "third_party": true
@@ -1403,6 +1415,14 @@
      "price": 2099,
      "seller": "Only What's Needed (brand)",
      "url": "https://onlywhatsneeded.in/product/yeast-cocoa-1kg"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Cocoa",
+     "price": 2299,
+     "seller": "Only What's Needed",
+     "url": "https://www.amazon.in/dp/B0HPTCP5R3"
     }
    ]
   },
@@ -1539,6 +1559,15 @@
      "price": 1199,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0GQHCTTKP"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 2299,
+     "seller": "Amazon Retail",
+     "url": "https://www.amazon.in/dp/B0GVDWJJFQ",
+     "pack_note": "2 × 500 g"
     }
    ]
   },
@@ -1559,7 +1588,7 @@
      "size_kg": 0.5,
      "flavour": "Unflavoured",
      "price": 999,
-     "seller": "Taramis Labs (Foodstrong brand)",
+     "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0G2GGGP53"
     }
    ]
@@ -1573,14 +1602,25 @@
    "protein_basis": "24 g protein per serving, 13 servings in 500 g (about 38 g per serving; Amazon listing)",
    "sweetener": "Monk fruit extract (with cocoa)",
    "flags": [],
+   "offers": []
+  },
+  {
+   "id": "bigmuscles-yeast-isolate",
+   "category": "yeast",
+   "brand": "Bigmuscles Nutrition",
+   "name": "Clean Yeast Protein Isolate (Unflavoured)",
+   "protein_per_100g": 89,
+   "protein_basis": "33 g protein per 37 g scoop (Amazon listing); ingredients: fermented yeast protein isolate only",
+   "sweetener": "None",
+   "flags": [],
    "offers": [
     {
      "store": "Amazon",
-     "size_kg": 0.5,
-     "flavour": "Dark Chocolate",
-     "price": 1799,
-     "seller": "Nutritionalab (Wellbeing Nutrition)",
-     "url": "https://www.amazon.in/dp/B0HPBD84ZG"
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 1599,
+     "seller": "RK World Infocom",
+     "url": "https://www.amazon.in/dp/B0H8S1K7XM"
     }
    ]
   },
@@ -1622,7 +1662,7 @@
      "store": "Flipkart",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 265,
+     "price": 239,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-monohydrate-powder-creatine/p/itm603c702bda1fd?pid=PSLGPF95QWEGTMQZ",
      "third_party": true
@@ -1631,10 +1671,20 @@
      "store": "Flipkart",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 513,
+     "price": 477,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-micronized-creatine-monohydrate-jar-trustified-certified-supports-muscle-growth/p/itm0eaeba74b9bd9?pid=PSLGRZSYZJZVGVSB",
      "third_party": true
+    },
+    {
+     "store": "Flipkart",
+     "size_kg": 0.15,
+     "flavour": "Unflavoured",
+     "price": 235,
+     "seller": "MYTHANGLORYRetail",
+     "url": "https://www.flipkart.com/nakpro-micronised-monohydrate-creatine/p/itmfad7adf0b1d49?pid=PSLH29ZGGDAQVXBE",
+     "third_party": true,
+     "low_stock": true
     }
    ],
    "flavoured": false
@@ -1731,15 +1781,15 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 379,
-     "seller": "Nutrabay (brand)",
+     "price": 349,
+     "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B09VP6HL5J"
     },
     {
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 653,
+     "price": 549,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B07W95BV9H"
     },
@@ -1755,7 +1805,7 @@
      "store": "Flipkart",
      "size_kg": 0.4,
      "flavour": "Unflavoured",
-     "price": 999,
+     "price": 849,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nutrabay-pure-micronised-creatine-monohydrate-pre-post-workout-supplement-400-gram/p/itm064f968dcc91c?pid=PSLH2WXFZXUQDS33",
      "third_party": true
@@ -1807,6 +1857,14 @@
      "kind": "sachet",
      "sachet_count": 30,
      "sachet_g": 3
+    },
+    {
+     "store": "Flipkart",
+     "size_kg": 0.1,
+     "flavour": "Unflavoured",
+     "price": 549,
+     "seller": "Wellversed (Wellcore brand)",
+     "url": "https://www.flipkart.com/wellcore-micronised-monohydrate-creatine/p/itm332fcc7efb02b?pid=PSLGNAX3SZHHGRRG"
     }
    ],
    "flavoured": false
@@ -1953,7 +2011,7 @@
      "store": "Flipkart",
      "size_kg": 0.249,
      "flavour": "Unflavoured",
-     "price": 649,
+     "price": 714,
      "seller": "BeastLife",
      "url": "https://www.flipkart.com/beastlife-creatine-monohydrate-83-servings-nabl-lab-tested-micronised/p/itm80e4371e583cf?pid=PSLHF2J4M7QGHYDR"
     }
@@ -2019,7 +2077,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 699,
+     "price": 769,
      "seller": "GMC Supplements",
      "url": "https://www.amazon.in/dp/B0G49JX8KV"
     },
@@ -2048,7 +2106,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 399,
+     "price": 381,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0B97JMMK4"
     },
@@ -2285,9 +2343,10 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 199,
-     "seller": "GlobalBees Health (HealthyHey)",
-     "url": "https://www.amazon.in/dp/B09HX5BR2T"
+     "price": 279,
+     "seller": "RK World Infocom",
+     "url": "https://www.amazon.in/dp/B09HX5BR2T",
+     "low_stock": true
     }
    ],
    "flavoured": false
@@ -2412,7 +2471,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Soya chunks",
-     "price": 134.93,
+     "price": 146.72,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40019482/fortune-soya-chunks-1-kg-pouch/"
     }
@@ -2496,7 +2555,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Sattu",
-     "price": 147,
+     "price": 166.8,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40046733/bb-royal-sattu-atta-1-kg/"
     }
@@ -2517,7 +2576,7 @@
      "store": "BigBasket",
      "size_kg": 0.5,
      "flavour": "Sattu",
-     "price": 96,
+     "price": 96.5,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40017084/manna-chana-sattu-refreshing-drink-powder-500-g/"
     }
@@ -2651,7 +2710,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 284,
+     "price": 232.5,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2675,7 +2734,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 352,
+     "price": 402.5,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -3013,7 +3072,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 4449,
+     "price": 3499,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B0793S1K16"
     }
@@ -3216,7 +3275,7 @@
   },
   {
    "brand": "MuscleBlaze Yeast Protein",
-   "reason": "Sweetener could not be confirmed from the listing."
+   "reason": "Sweetened with sucralose (INS 955) per the Amazon ingredient list (Rich Chocolate, 1 kg)."
   },
   {
    "brand": "Mille Dark Chocolate / Coffee Hazelnut",
@@ -3389,6 +3448,10 @@
   {
    "brand": "Myprotein Creatine Monohydrate 100 g (new)",
    "reason": "Sold by a small third-party seller, and the listing says unflavoured but also mentions a Nimbu Pani flavour, so the contents can't be confirmed."
+  },
+  {
+   "brand": "AS-IT-IS ATOM NXT Yeast Protein, Kesar Kulfi (new)",
+   "reason": "Flavoured, but the ingredient list and sweetener aren't shown on the listing. AS-IT-IS ONE Yeast Protein (unflavoured) is included."
   }
  ]
 }
