@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-21T19:04:00+05:30",
+ "checked_at": "2026-11-23T16:56:00+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
@@ -25,7 +25,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2199,
+     "price": 2089,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B07YX4VLC2"
     },
@@ -33,7 +33,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2089,
+     "price": 2199,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-100-perform-concentrate-24-7g-protein-5-7g-bcaa-whey-protein/p/itm4621f08fbdd8c?pid=PSLFN3HBVDRUGJZK",
      "third_party": true
@@ -58,7 +58,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1159,
+     "price": 1213,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B09Z28BFJB"
     },
@@ -307,15 +307,6 @@
      "seller": "MyNutraMart",
      "url": "https://www.flipkart.com/as-it-is-nutrition-one-whey-protein/p/itm54fcb09cd7346?pid=PSLF3NJHZWGJWXBG",
      "low_stock": true,
-     "third_party": true
-    },
-    {
-     "store": "Flipkart",
-     "size_kg": 2,
-     "flavour": "Unflavoured",
-     "price": 6512,
-     "seller": "MyNutraMart",
-     "url": "https://www.flipkart.com/as-it-is-nutrition-one-concentrate-pure-clean-raw-28g-per-serve-whey-protein/p/itm3cbb92bb5b5bf?pid=PSLFK9DWY8D2NVND",
      "third_party": true
     },
     {
@@ -681,28 +672,12 @@
      "url": "https://nutrabay.com/product/nutrabay-whey-protein-concentrate/?pId=7275894&vId=3006631"
     },
     {
-     "store": "Nutrabay",
-     "size_kg": 2,
-     "flavour": "Unflavoured",
-     "price": 7099,
-     "seller": "Nutrabay (brand)",
-     "url": "https://nutrabay.com/product/nutrabay-whey-protein-concentrate/?pId=7275894&vId=3006631"
-    },
-    {
      "store": "Tata 1mg",
      "size_kg": 1,
      "flavour": "Unflavoured",
      "price": 3799,
      "seller": "Nutrabay Retail Pvt. Ltd.",
      "url": "https://www.1mg.com/otc/nutrabay-whey-concentrate-protein-for-muscle-recovery-no-added-sugar-powder-unflavoured-otc536796"
-    },
-    {
-     "store": "Tata 1mg",
-     "size_kg": 2,
-     "flavour": "Unflavoured",
-     "price": 7099,
-     "seller": "Nutrabay Retail Pvt. Ltd.",
-     "url": "https://www.1mg.com/otc/nutrabay-pure-whey-protein-concentrate-for-muscle-recovery-immunity-no-added-sugar-unflavoured-otc610069"
     }
    ]
   },
@@ -1023,7 +998,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Light Cocoa",
-     "price": 4445,
+     "price": 4374,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730403"
     },
@@ -1031,7 +1006,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Light Cocoa",
-     "price": 8719,
+     "price": 8599,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730404"
     },
@@ -1069,7 +1044,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2099,
+     "price": 2199,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FLDZD6BW",
      "third_party": false
@@ -1086,7 +1061,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 3999,
+     "price": 3775,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/unflavoured-fermented-yeast-protein-1kg-jar-x-2?variant=67413683896610",
      "pack_note": "2 × 1 kg jars"
@@ -1107,7 +1082,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2105,
+     "price": 2249,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1116,7 +1091,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Cold Coffee",
-     "price": 2199,
+     "price": 2249,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FKBD3P62",
      "third_party": false
@@ -1125,7 +1100,7 @@
      "store": "superyou.in",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2349,
+     "price": 2099,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/chocolate-protein-powder?variant=50150697140514"
     },
@@ -1133,7 +1108,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Chocolate",
-     "price": 4399,
+     "price": 4175,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/chocolate-fermented-yeast-protein-1kg-jar-x-2?variant=67413509931298",
      "pack_note": "2 × 1 kg jars"
@@ -1142,7 +1117,7 @@
      "store": "superyou.in",
      "size_kg": 1,
      "flavour": "Cold Coffee",
-     "price": 2349,
+     "price": 2099,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/coffee-protein-powder?variant=50155875041570"
     },
@@ -1150,7 +1125,7 @@
      "store": "superyou.in",
      "size_kg": 2,
      "flavour": "Cold Coffee",
-     "price": 4399,
+     "price": 4175,
      "seller": "SuperYou (brand)",
      "url": "https://superyou.in/products/cold-coffee-fermented-yeast-protein-1kg-jar-x-2?variant=67413529788706",
      "pack_note": "2 × 1 kg jars"
@@ -1182,15 +1157,6 @@
      "price": 2099,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0GXWJW266"
-    },
-    {
-     "store": "Flipkart",
-     "size_kg": 1,
-     "flavour": "Cafe Mocha",
-     "price": 2099,
-     "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/truebasics-clean-yeast-protein-powder-25g-per-scoop/p/itm70d55f5c25d24?pid=PSLHS645T3V8GJHJ",
-     "low_stock": true
     },
     {
      "store": "truebasics.com",
@@ -1249,7 +1215,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1519,
+     "price": 1614,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0FL7GR4RK"
     },
@@ -1588,7 +1554,7 @@
      "size_kg": 0.5,
      "flavour": "Unflavoured",
      "price": 999,
-     "seller": "Amazon Retail",
+     "seller": "Taramis Labs Private Limited",
      "url": "https://www.amazon.in/dp/B0G2GGGP53"
     }
    ]
@@ -1613,16 +1579,7 @@
    "protein_basis": "33 g protein per 37 g scoop (Amazon listing); ingredients: fermented yeast protein isolate only",
    "sweetener": "None",
    "flags": [],
-   "offers": [
-    {
-     "store": "Amazon",
-     "size_kg": 1,
-     "flavour": "Unflavoured",
-     "price": 1599,
-     "seller": "RK World Infocom",
-     "url": "https://www.amazon.in/dp/B0H8S1K7XM"
-    }
-   ]
+   "offers": []
   },
   {
    "id": "cr-nakpro",
@@ -1638,7 +1595,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 265,
+     "price": 292,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B0C3HRYN5Q"
     },
@@ -1646,7 +1603,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 444,
+     "price": 468,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B07WN552H2"
     },
@@ -1662,7 +1619,7 @@
      "store": "Flipkart",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 239,
+     "price": 265,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-monohydrate-powder-creatine/p/itm603c702bda1fd?pid=PSLGPF95QWEGTMQZ",
      "third_party": true
@@ -1671,20 +1628,18 @@
      "store": "Flipkart",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 477,
+     "price": 513,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-micronized-creatine-monohydrate-jar-trustified-certified-supports-muscle-growth/p/itm0eaeba74b9bd9?pid=PSLGRZSYZJZVGVSB",
      "third_party": true
     },
     {
      "store": "Flipkart",
-     "size_kg": 0.15,
+     "size_kg": 0.4,
      "flavour": "Unflavoured",
-     "price": 235,
-     "seller": "MYTHANGLORYRetail",
-     "url": "https://www.flipkart.com/nakpro-micronised-monohydrate-creatine/p/itmfad7adf0b1d49?pid=PSLH29ZGGDAQVXBE",
-     "third_party": true,
-     "low_stock": true
+     "price": 861,
+     "seller": "NAKPRO",
+     "url": "https://www.flipkart.com/nakpro-creatine-monohydrate-powder-muscle-endurance-recovery-400-g-unflavor/p/itm1c2c20265d8d8?pid=PSLFKVPPCZHUFAWG"
     }
    ],
    "flavoured": false
@@ -1763,6 +1718,15 @@
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/as-it-is-nutrition-one-monohydrate-enhanced-muscle-strength-creatine/p/itm65b07a732988b?pid=PSLF3NKGNFQGFHZG",
      "third_party": true
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 0.1,
+     "flavour": "Unflavoured",
+     "price": 266,
+     "seller": "My Nutra Mart",
+     "url": "https://www.amazon.in/dp/B07Q8JJLFL",
+     "third_party": true
     }
    ],
    "flavoured": false
@@ -1781,7 +1745,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 349,
+     "price": 276,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B09VP6HL5J"
     },
@@ -1789,7 +1753,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 549,
+     "price": 491,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B07W95BV9H"
     },
@@ -1923,6 +1887,14 @@
      "price": 498,
      "seller": "TATA 1MG",
      "url": "https://www.amazon.in/dp/B0F3DGH1F8"
+    },
+    {
+     "store": "Flipkart",
+     "size_kg": 0.25,
+     "flavour": "Unflavoured",
+     "price": 498,
+     "seller": "TATA1MG",
+     "url": "https://www.flipkart.com/tata-1mg-monohydrate-2x-micronized-zero-calories-fast-absorption-creatine/p/itm41ba251a1f212?pid=PSLHBF7EMXB8H4QU"
     }
    ],
    "flavoured": false
@@ -2032,7 +2004,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 199,
+     "price": 189,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0C74LBXV6"
     },
@@ -2077,7 +2049,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 769,
+     "price": 699,
      "seller": "GMC Supplements",
      "url": "https://www.amazon.in/dp/B0G49JX8KV"
     },
@@ -2293,7 +2265,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 523,
+     "price": 494,
      "seller": "Wellbeing Nutrition (brand)",
      "url": "https://www.amazon.in/dp/B0DMVS533L"
     }
@@ -2343,10 +2315,9 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 279,
-     "seller": "RK World Infocom",
-     "url": "https://www.amazon.in/dp/B09HX5BR2T",
-     "low_stock": true
+     "price": 199,
+     "seller": "GlobalBees Health",
+     "url": "https://www.amazon.in/dp/B09HX5BR2T"
     }
    ],
    "flavoured": false
@@ -2492,7 +2463,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Soya chunks",
-     "price": 148.86,
+     "price": 149.5,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/257382/nutrela-soya-chunks-1-kg-pouch/"
     }
@@ -2534,7 +2505,7 @@
      "store": "BigBasket",
      "size_kg": 0.5,
      "flavour": "Moong dal",
-     "price": 89,
+     "price": 81,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/30007756/tata-sampann-unpolished-moong-dal-split-500-g-pouch/"
     }
@@ -2710,7 +2681,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 232.5,
+     "price": 284,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2734,7 +2705,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 402.5,
+     "price": 352,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -2825,8 +2796,9 @@
      "size_kg": 0.1,
      "flavour": "Citrus Orange",
      "price": 549,
-     "seller": "RK World Infocom",
-     "url": "https://www.amazon.in/dp/B0GF33723C"
+     "seller": "Touchstone Teleservices",
+     "url": "https://www.amazon.in/dp/B0GF33723C",
+     "third_party": true
     },
     {
      "store": "Amazon",
@@ -3072,7 +3044,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3499,
+     "price": 4450,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B0793S1K16"
     }
@@ -3452,6 +3424,10 @@
   {
    "brand": "AS-IT-IS ATOM NXT Yeast Protein, Kesar Kulfi (new)",
    "reason": "Flavoured, but the ingredient list and sweetener aren't shown on the listing. AS-IT-IS ONE Yeast Protein (unflavoured) is included."
+  },
+  {
+   "brand": "Pure Nutrition Fermented Yeast Protein Isolate (new)",
+   "reason": "Listing says no artificial sweeteners and 25 g protein per serving, but the ingredient list and serving size couldn't be read."
   }
  ]
 }
