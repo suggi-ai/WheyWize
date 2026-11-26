@@ -1,15 +1,10 @@
 {
- "checked_at": "2026-11-24T16:55:00+05:30",
+ "checked_at": "2026-11-25T16:58:00+05:30",
  "stores_checked": [
   "Amazon.in",
-  "Flipkart",
-  "Brand websites",
-  "HealthKart",
-  "Nutrabay",
-  "Tata 1mg",
-  "BigBasket"
+  "nakpro.com"
  ],
- "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. Flipkart low-stock flags are carried over from the last check. This check re-read every store: Amazon.in, Flipkart, the brand websites (Nakpro, AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket.",
+ "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. This check re-read Amazon.in (112 of 121 listings; 9 could not be loaded and keep their 11:00 am prices) and nakpro.com. The browser disconnected partway through, so Flipkart, the other brand websites (AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket were not re-checked and show prices from the 11:00 am IST check today. Flipkart low-stock flags are carried over from the last check.",
  "products": [
   {
    "id": "nakpro-perform",
@@ -33,7 +28,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2050,
+     "price": 2199,
      "seller": "MYTHANGLORYRetail",
      "url": "https://www.flipkart.com/nakpro-100-perform-concentrate-24-7g-protein-5-7g-bcaa-whey-protein/p/itm4621f08fbdd8c?pid=PSLFN3HBVDRUGJZK",
      "third_party": true
@@ -286,7 +281,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2999,
+     "price": 3299,
      "seller": "My Nutra Mart",
      "url": "https://www.amazon.in/dp/B079SZJJDR",
      "third_party": true
@@ -821,7 +816,7 @@
      "store": "Amazon",
      "size_kg": 2,
      "flavour": "Chocolate + Coffee",
-     "price": 6735.99,
+     "price": 6508.14,
      "seller": "Naturaltein (brand)",
      "url": "https://www.amazon.in/dp/B0GTMLKZBK",
      "pack_note": "1 kg Chocolate + 1 kg Coffee"
@@ -945,7 +940,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 4199,
+     "price": 3929,
      "seller": "Naturaltein (brand)",
      "url": "https://www.amazon.in/dp/B0B8MTNKX2"
     },
@@ -1054,7 +1049,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2199,
+     "price": 2099,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FLDZD6BW",
      "third_party": false
@@ -1760,8 +1755,8 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 491,
-     "seller": "RK World Infocom",
+     "price": 699,
+     "seller": "Nutrabay Retail (brand)",
      "url": "https://www.amazon.in/dp/B07W95BV9H"
     },
     {
@@ -1862,7 +1857,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 925,
+     "price": 889,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0DBL1T67V"
     },
@@ -2066,7 +2061,7 @@
      "size_kg": 0.25,
      "flavour": "Unflavoured",
      "price": 699,
-     "seller": "RK World Infocom",
+     "seller": "GMC Supplements",
      "url": "https://www.amazon.in/dp/B0G49JX8KV"
     },
     {
@@ -2634,7 +2629,7 @@
      "store": "BigBasket",
      "size_kg": 0.2,
      "flavour": "Paneer",
-     "price": 72,
+     "price": 71,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/264679/milky-mist-paneer-premium-fresh-200-g-pouch/"
     }
@@ -2676,7 +2671,7 @@
      "store": "BigBasket",
      "size_kg": 0.2,
      "flavour": "Paneer",
-     "price": 104,
+     "price": 115,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/270620/nandini-paneer-200-g-pouch/"
     }
@@ -2697,7 +2692,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 284,
+     "price": 231,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2721,7 +2716,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 352,
+     "price": 408.59,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40211592/eggoz-white-farm-fresh-eggs-omega-3-rich-with-no-ddgs-hormone-steroids-30-pcs/",
      "pieces": 30,
@@ -2812,7 +2807,7 @@
      "size_kg": 0.1,
      "flavour": "Citrus Orange",
      "price": 549,
-     "seller": "Touchstone Teleservices Pvt Ltd",
+     "seller": "Touchstone Teleservices",
      "url": "https://www.amazon.in/dp/B0GF33723C",
      "third_party": true,
      "low_stock": true
@@ -2957,7 +2952,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 7999,
+     "price": 6959,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0D17K39TW",
      "third_party": false
@@ -3061,7 +3056,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 4450,
+     "price": 4449,
      "seller": "NAKPRO Nutrition",
      "url": "https://www.amazon.in/dp/B0793S1K16"
     }
@@ -3102,6 +3097,15 @@
      "price": 8979,
      "seller": "AS-IT-IS (brand)",
      "url": "https://asitisnutrition.com/products/buy-whey-protein-isolate?variant=31473977131059"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 4613,
+     "seller": "My Nutra Mart",
+     "url": "https://www.amazon.in/dp/B07F2FH5NV",
+     "third_party": true
     },
     {
      "store": "Amazon",
@@ -3148,7 +3152,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 2899,
+     "price": 2895,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0953F26ZZ"
     },
@@ -3195,6 +3199,37 @@
      "price": 5149,
      "seller": "TATA 1MG",
      "url": "https://www.amazon.in/dp/B0H6XSRGX7"
+    }
+   ]
+  },
+  {
+   "id": "nutrova-wpi",
+   "category": "isolate",
+   "brand": "Nutrova",
+   "name": "Whey Protein Isolate",
+   "protein_per_100g": 83,
+   "protein_basis": "25 g protein per 30 g scoop (Amazon listing); ingredient: whey protein isolate only, no sweetener",
+   "sweetener": "None",
+   "flags": [],
+   "offers": [
+    {
+     "store": "Amazon",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 6175,
+     "seller": "Nutrova (brand)",
+     "url": "https://www.amazon.in/dp/B0FG7QR2ZK"
+    },
+    {
+     "store": "Amazon",
+     "size_kg": 0.12,
+     "flavour": "Unflavoured",
+     "price": 719,
+     "seller": "Nutrova (brand)",
+     "url": "https://www.amazon.in/dp/B0GTLZ2GZ2",
+     "kind": "sachet",
+     "sachet_count": 4,
+     "sachet_g": 30
     }
    ]
   },
@@ -3492,6 +3527,30 @@
   {
    "brand": "Ronnie Coleman Signature Series Creatine XS, Unflavoured (new)",
    "reason": "Clean label (creatine monohydrate only), but it is a US brand sold through importers rather than an established Indian brand; at ₹1,199 for 300 g it would not rank near the top anyway."
+  },
+  {
+   "brand": "Naturaltein Whey Protein Isolate, Unflavoured 1 kg (new)",
+   "reason": "Clean label (whey isolate + sunflower lecithin) and 26.85 g protein per serving, but the 1 kg Amazon listing does not state the serving size, so protein per 100 g can't be confirmed."
+  },
+  {
+   "brand": "The Func. Lab Whey Protein Isolate, Unflavored (new)",
+   "reason": "Sold as unflavoured but sweetened with monk fruit + stevia; a sweetened pure isolate fits neither the unsweetened isolate table nor the naturally sweetened concentrate table."
+  },
+  {
+   "brand": "avvatar Whey Protein, Monk Fruit & Stevia (new)",
+   "reason": "Ingredient list is not shown on the Amazon listing; avvatar whey is an isolate + concentrate blend."
+  },
+  {
+   "brand": "MyFitFuel MFF Whey Protein 90 Isolate, Unflavoured (new)",
+   "reason": "Clean label (whey isolate only, 27.9 g protein per scoop as is), but the scoop size is not stated and the listing shows no stock status."
+  },
+  {
+   "brand": "Muscle Nectar Whey Protein with Digestive Enzymes, 73% (new)",
+   "reason": "Concentrate + isolate blend; the listing gives the ingredient as just \"Whey Protein\" and the sweetener can't be confirmed."
+  },
+  {
+   "brand": "Zenith Nutrition Raw Whey Protein 80% (new)",
+   "reason": "Lists sucralose (INS 955) and milk solids despite the \"raw whey\" name."
   }
  ]
 }
