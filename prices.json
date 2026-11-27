@@ -1,10 +1,24 @@
 {
- "checked_at": "2026-11-25T16:58:00+05:30",
+ "checked_at": "2026-11-26T16:56:00+05:30",
  "stores_checked": [
   "Amazon.in",
-  "nakpro.com"
+  "Flipkart",
+  "nakpro.com",
+  "asitisnutrition.com",
+  "yogabars.in",
+  "naturaltein.in",
+  "superyou.in",
+  "livemille.com",
+  "thewholetruthfoods.com",
+  "onlywhatsneeded.in",
+  "muscleblaze.com",
+  "truebasics.com",
+  "HealthKart",
+  "Nutrabay",
+  "Tata 1mg",
+  "BigBasket"
  ],
- "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. This check re-read Amazon.in (112 of 121 listings; 9 could not be loaded and keep their 11:00 am prices) and nakpro.com. The browser disconnected partway through, so Flipkart, the other brand websites (AS-IT-IS, Yogabar, SuperYou, Naturaltein, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket were not re-checked and show prices from the 11:00 am IST check today. Flipkart low-stock flags are carried over from the last check.",
+ "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. This check (4:56 pm IST) re-read every listed store: Amazon.in, Flipkart, the brand websites (Nakpro, AS-IT-IS, Yogabar, Naturaltein, SuperYou, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket.",
  "products": [
   {
    "id": "nakpro-perform",
@@ -63,8 +77,7 @@
      "flavour": "Unflavoured",
      "price": 1213,
      "seller": "NAKPRO",
-     "url": "https://www.flipkart.com/nakpro-perform-supplement-powder-whey-protein/p/itm1057ef16491c7?pid=PSLGE9BXYDFEPHUB",
-     "low_stock": true
+     "url": "https://www.flipkart.com/nakpro-perform-supplement-powder-whey-protein/p/itm1057ef16491c7?pid=PSLGE9BXYDFEPHUB"
     },
     {
      "store": "nakpro.com",
@@ -199,8 +212,7 @@
      "flavour": "Unflavoured",
      "price": 2899,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/muscleblaze-raw-concentrate-24g-protein-per-scoop-light-clean-whey/p/itm9d69a70d5f057?pid=PSLGKQKZWRG8PVG9",
-     "low_stock": true
+     "url": "https://www.flipkart.com/muscleblaze-raw-concentrate-24g-protein-per-scoop-light-clean-whey/p/itm9d69a70d5f057?pid=PSLGKQKZWRG8PVG9"
     }
    ]
   },
@@ -236,8 +248,7 @@
      "flavour": "Unflavoured",
      "price": 3499,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itmf66a3275aedb3?pid=PSLET4NDF84FHZGV",
-     "low_stock": true
+     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itmf66a3275aedb3?pid=PSLET4NDF84FHZGV"
     },
     {
      "store": "Flipkart",
@@ -245,8 +256,7 @@
      "flavour": "Unflavoured",
      "price": 6799,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itm1e2609a0e60de?pid=PSLF23XUYDWAJQHG",
-     "low_stock": true
+     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itm1e2609a0e60de?pid=PSLF23XUYDWAJQHG"
     },
     {
      "store": "muscleblaze.com",
@@ -262,8 +272,7 @@
      "flavour": "Unflavoured",
      "price": 1899,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itmad6ecfb40260c?pid=PSLFGHVQETU8NYTY",
-     "low_stock": true
+     "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-concentrate-whey-protein/p/itmad6ecfb40260c?pid=PSLFGHVQETU8NYTY"
     }
    ]
   },
@@ -302,7 +311,6 @@
      "price": 3299,
      "seller": "MyNutraMart",
      "url": "https://www.flipkart.com/as-it-is-nutrition-one-whey-protein/p/itm54fcb09cd7346?pid=PSLF3NJHZWGJWXBG",
-     "low_stock": true,
      "third_party": true
     },
     {
@@ -430,7 +438,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3799,
+     "price": 3894,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0FFHB9B6Q"
     },
@@ -440,14 +448,13 @@
      "flavour": "Unflavoured",
      "price": 3799,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/truebasics-clean-raw-concentrate-whey-protein/p/itm22c873d0a2188?pid=PSLHGXKNQBEGGKBA",
-     "low_stock": true
+     "url": "https://www.flipkart.com/truebasics-clean-raw-concentrate-whey-protein/p/itm22c873d0a2188?pid=PSLHGXKNQBEGGKBA"
     },
     {
      "store": "truebasics.com",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3799,
+     "price": 3899,
      "seller": "TrueBasics (brand)",
      "url": "https://www.truebasics.com/sv/truebasics-clean-raw-whey-concentrate/SP-136503"
     },
@@ -455,7 +462,7 @@
      "store": "HealthKart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3799,
+     "price": 3899,
      "seller": "",
      "url": "https://www.healthkart.com/sv/truebasics-clean-raw-whey-concentrate/SP-135891"
     }
@@ -499,7 +506,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3854,
+     "price": 3777,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730409"
     },
@@ -507,7 +514,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 7549,
+     "price": 7172,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/unflavored-26g-whey-protein-isolate-concentrate?sku_id=38730410"
     },
@@ -635,7 +642,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 3819,
+     "price": 4099,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-whey-protein-concentrate-unflavoured-1-kg-no-artificial-sweeteners/p/itm8ef600100eaba?pid=PSLHCVV7PAKVH7GH"
     },
@@ -783,7 +790,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 3279,
+     "price": 3499,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-max-protein-no-added-sugar-sweetened-stevia-whey/p/itm525e5b284e4a1?pid=PSLHCN8RVYZ5YNEN"
     },
@@ -791,16 +798,15 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Coffee",
-     "price": 3279,
+     "price": 3499,
      "seller": "Naturaltein (brand)",
-     "url": "https://www.flipkart.com/naturaltein-natural-whey-1kg-max-coffee-24g-protein-stevia-gluten-soy-free/p/itm19486f9c03687?pid=PSLHCSMQWBWQEE2U",
-     "low_stock": true
+     "url": "https://www.flipkart.com/naturaltein-natural-whey-1kg-max-coffee-24g-protein-stevia-gluten-soy-free/p/itm19486f9c03687?pid=PSLHCSMQWBWQEE2U"
     },
     {
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Vanilla",
-     "price": 3151,
+     "price": 3381,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-whey-1kg-max-vanilla-24g-protein-stevia-gluten-soy-free-protein/p/itmfb41ae5f3bcb1?pid=PSLHCSH4SNJ6TK2J"
     },
@@ -808,7 +814,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Rose Kulfi",
-     "price": 3279,
+     "price": 3499,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-whey-1kg-max-rose-kulfi-24g-protein-stevia-gluten-soy-free-protein/p/itm985bdc1ba4f7a?pid=PSLHCVWQ9TPZWRPC"
     },
@@ -828,8 +834,7 @@
      "price": 6899,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-whey-max-coffee-chocolate-24g-protein-stevia-gluten-soy-free-whey/p/itm9519d969c001c?pid=PSLHRFHG6ZMGWPZD",
-     "pack_note": "1 kg Coffee + 1 kg Chocolate",
-     "low_stock": true
+     "pack_note": "1 kg Coffee + 1 kg Chocolate"
     },
     {
      "store": "naturaltein.in",
@@ -940,7 +945,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 3929,
+     "price": 4493,
      "seller": "Naturaltein (brand)",
      "url": "https://www.amazon.in/dp/B0B8MTNKX2"
     },
@@ -948,7 +953,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Chocolate Biscoff",
-     "price": 3929,
+     "price": 4199,
      "seller": "Naturaltein (brand)",
      "url": "https://www.flipkart.com/naturaltein-natural-whey-protein-concentrate-chocolate-bis-coff-1-kg-naturally-flavored/p/itmc967f827f9cc5?pid=PSLHF6CDWZHT2G7A"
     },
@@ -1003,7 +1008,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 1,
      "flavour": "Light Cocoa",
-     "price": 4114,
+     "price": 4115,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730403"
     },
@@ -1011,7 +1016,7 @@
      "store": "thewholetruthfoods.com",
      "size_kg": 2,
      "flavour": "Light Cocoa",
-     "price": 8179,
+     "price": 7884,
      "seller": "The Whole Truth (brand)",
      "url": "https://thewholetruthfoods.com/products/light-cocoa-24g-whey-protein-isolate-concentrate?sku_id=38730404"
     },
@@ -1087,18 +1092,9 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2249,
+     "price": 2199,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
-     "third_party": false
-    },
-    {
-     "store": "Amazon",
-     "size_kg": 1,
-     "flavour": "Cold Coffee",
-     "price": 2249,
-     "seller": "RK World Infocom",
-     "url": "https://www.amazon.in/dp/B0FKBD3P62",
      "third_party": false
     },
     {
@@ -1185,8 +1181,7 @@
      "flavour": "Coffee",
      "price": 1149,
      "seller": "Bright Lifecare (brand)",
-     "url": "https://www.flipkart.com/truebasics-clean-yeast-protein-powder-25g-per-scoop/p/itm79fcc8f15b647?pid=PSLHS2GKZXNDC32K",
-     "low_stock": true
+     "url": "https://www.flipkart.com/truebasics-clean-yeast-protein-powder-25g-per-scoop/p/itm79fcc8f15b647?pid=PSLHS2GKZXNDC32K"
     }
    ]
   },
@@ -1212,7 +1207,7 @@
      "store": "livemille.com",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1611,
+     "price": 1499,
      "seller": "Mille (brand)",
      "url": "https://livemille.com/products/unflavoured-protein?variant=45440443580613"
     },
@@ -1232,6 +1227,22 @@
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0H34X873X",
      "pack_note": "1,000 g listed as 2 items"
+    },
+    {
+     "store": "livemille.com",
+     "size_kg": 1,
+     "flavour": "Unflavoured",
+     "price": 2805,
+     "seller": "Mille (brand)",
+     "url": "https://livemille.com/products/unflavoured-protein?variant=50595783672005"
+    },
+    {
+     "store": "livemille.com",
+     "size_kg": 2,
+     "flavour": "Unflavoured",
+     "price": 5099,
+     "seller": "Mille (brand)",
+     "url": "https://livemille.com/products/unflavoured-protein?variant=50595783704773"
     }
    ]
   },
@@ -1333,7 +1344,7 @@
      "store": "yogabars.in",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 1899,
+     "price": 1799,
      "seller": "Yogabar (brand)",
      "url": "https://www.yogabars.in/products/fermented-yeast-protein-chocolate?variant=46647914725548",
      "pack_note": "2 × 500 g"
@@ -1755,8 +1766,8 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 699,
-     "seller": "Nutrabay Retail (brand)",
+     "price": 549,
+     "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B07W95BV9H"
     },
     {
@@ -2060,8 +2071,8 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 699,
-     "seller": "GMC Supplements",
+     "price": 689,
+     "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0G49JX8KV"
     },
     {
@@ -2089,7 +2100,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 381,
+     "price": 399,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0B97JMMK4"
     },
@@ -2097,7 +2108,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 799,
+     "price": 949,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B07MJ6YHVW"
     }
@@ -2516,7 +2527,7 @@
      "store": "BigBasket",
      "size_kg": 0.5,
      "flavour": "Moong dal",
-     "price": 89,
+     "price": 99,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/30007756/tata-sampann-unpolished-moong-dal-split-500-g-pouch/"
     }
@@ -2692,7 +2703,7 @@
      "store": "BigBasket",
      "size_kg": 0,
      "flavour": "Eggs",
-     "price": 231,
+     "price": 276,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/150502/fresho-farm-eggs-table-tray-medium-antibiotic-residue-free-30-pcs/",
      "pieces": 30,
@@ -2807,10 +2818,8 @@
      "size_kg": 0.1,
      "flavour": "Citrus Orange",
      "price": 549,
-     "seller": "Touchstone Teleservices",
-     "url": "https://www.amazon.in/dp/B0GF33723C",
-     "third_party": true,
-     "low_stock": true
+     "seller": "RK World Infocom",
+     "url": "https://www.amazon.in/dp/B0GF33723C"
     },
     {
      "store": "Amazon",
@@ -2952,7 +2961,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 6959,
+     "price": 7603,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0D17K39TW",
      "third_party": false
@@ -3168,7 +3177,7 @@
      "store": "Flipkart",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 5459,
+     "price": 5599,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-isolate-27g-protein-per-scoop-easy-digest-whey/p/itm2830cff550c86?pid=PSLEPKW8THM2XNFR"
     },
@@ -3176,7 +3185,7 @@
      "store": "Flipkart",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 2759,
+     "price": 2899,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.flipkart.com/muscleblaze-100-clean-raw-isolate-27g-protein-per-scoop-easy-digest-whey/p/itm479671ebbdbd3?pid=PSLG35ZDURBNFHKB"
     }
@@ -3551,6 +3560,10 @@
   {
    "brand": "Zenith Nutrition Raw Whey Protein 80% (new)",
    "reason": "Lists sucralose (INS 955) and milk solids despite the \"raw whey\" name."
+  },
+  {
+   "brand": "just go nutrition, IGNITOR, zeelab, POWERLIFT, bybv Whey More (new on Flipkart)",
+   "reason": "Smaller brands that aren't established Indian sports-nutrition brands, and ingredients and serving size weren't confirmed from the listings; bybv Whey More is a whey + yeast protein blend, not a concentrate."
   }
  ]
 }
