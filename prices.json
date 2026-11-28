@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-26T16:56:00+05:30",
+ "checked_at": "2026-11-27T16:35:00+05:30",
  "stores_checked": [
   "Amazon.in",
   "Flipkart",
@@ -18,7 +18,7 @@
   "Tata 1mg",
   "BigBasket"
  ],
- "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. This check (4:56 pm IST) re-read every listed store: Amazon.in, Flipkart, the brand websites (Nakpro, AS-IT-IS, Yogabar, Naturaltein, SuperYou, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket.",
+ "notes": "Prices are the selling price on the product page at the time of the check, before bank offers, coupons and membership prices. Delivery charges and stock depend on your pincode and are shown on the store page. Desi food prices are BigBasket Bengaluru prices and vary by city. This check (4:35 pm IST, 27 Nov) re-read every listed store: Amazon.in, Flipkart, the brand websites (Nakpro, AS-IT-IS, Yogabar, Naturaltein, SuperYou, Mille, The Whole Truth, Only What's Needed, MuscleBlaze, TrueBasics), HealthKart, Nutrabay, Tata 1mg and BigBasket.",
  "products": [
   {
    "id": "nakpro-perform",
@@ -299,7 +299,7 @@
      "store": "Amazon",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 6512,
+     "price": 6186,
      "seller": "My Nutra Mart",
      "url": "https://www.amazon.in/dp/B083DXW553",
      "third_party": true
@@ -325,7 +325,7 @@
      "store": "asitisnutrition.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 6512,
+     "price": 6056,
      "seller": "AS-IT-IS (brand)",
      "url": "https://asitisnutrition.com/products/best-whey-protein-concentrate-in-india?variant=18614626811955"
     },
@@ -420,6 +420,18 @@
      "price": 6512,
      "seller": "MyNutraMart",
      "url": "https://www.flipkart.com/as-it-is-nutrition-one-concentrate-pure-clean-raw-28g-per-serve-whey-protein/p/itm8ba720b50cd90?pid=PSLFK9DWY8D2NVND",
+     "third_party": true
+    },
+    {
+     "store": "Flipkart",
+     "size_kg": 0.035,
+     "flavour": "Unflavoured",
+     "price": 217,
+     "seller": "MyNutraMart",
+     "url": "https://www.flipkart.com/as-it-is-nutrition-one-whey-protein-concentrate-28g-unflavored-easy-carry-travel-sachet/p/itm2f16001c18ac0?pid=PSLGDZFHXBGFPS9Z",
+     "kind": "sachet",
+     "sachet_count": 1,
+     "sachet_g": 35,
      "third_party": true
     }
    ]
@@ -945,7 +957,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 4493,
+     "price": 4199,
      "seller": "Naturaltein (brand)",
      "url": "https://www.amazon.in/dp/B0B8MTNKX2"
     },
@@ -992,7 +1004,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Light Cocoa",
-     "price": 4374,
+     "price": 4380,
      "seller": "The Whole Truth",
      "url": "https://www.amazon.in/dp/B0CLB6K6Y6"
     },
@@ -1092,7 +1104,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Chocolate",
-     "price": 2199,
+     "price": 2099,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0FJS2C333",
      "third_party": false
@@ -1199,7 +1211,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2805,
+     "price": 2639,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0H4VZRTJM"
     },
@@ -1207,7 +1219,7 @@
      "store": "livemille.com",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1499,
+     "price": 1424,
      "seller": "Mille (brand)",
      "url": "https://livemille.com/products/unflavoured-protein?variant=45440443580613"
     },
@@ -1215,7 +1227,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 1614,
+     "price": 1424,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0FL7GR4RK"
     },
@@ -1223,7 +1235,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2659,
+     "price": 2621,
      "seller": "Amazon Retail",
      "url": "https://www.amazon.in/dp/B0H34X873X",
      "pack_note": "1,000 g listed as 2 items"
@@ -1232,7 +1244,7 @@
      "store": "livemille.com",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 2805,
+     "price": 2639,
      "seller": "Mille (brand)",
      "url": "https://livemille.com/products/unflavoured-protein?variant=50595783672005"
     },
@@ -1860,7 +1872,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 529,
+     "price": 549,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0C4LRGMD3"
     },
@@ -1868,7 +1880,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 889,
+     "price": 925,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0DBL1T67V"
     },
@@ -2071,8 +2083,8 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 689,
-     "seller": "RK World Infocom",
+     "price": 699,
+     "seller": "GMC Supplements",
      "url": "https://www.amazon.in/dp/B0G49JX8KV"
     },
     {
@@ -2100,7 +2112,7 @@
      "store": "Amazon",
      "size_kg": 0.1,
      "flavour": "Unflavoured",
-     "price": 399,
+     "price": 499,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0B97JMMK4"
     },
@@ -2108,8 +2120,8 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Unflavoured",
-     "price": 949,
-     "seller": "RK World Infocom",
+     "price": 1009,
+     "seller": "GNC IND",
      "url": "https://www.amazon.in/dp/B07MJ6YHVW"
     }
    ],
@@ -2548,7 +2560,7 @@
      "store": "BigBasket",
      "size_kg": 1,
      "flavour": "Sattu",
-     "price": 147,
+     "price": 166.8,
      "seller": "BigBasket",
      "url": "https://www.bigbasket.com/pd/40046733/bb-royal-sattu-atta-1-kg/"
     }
@@ -2825,7 +2837,7 @@
      "store": "Amazon",
      "size_kg": 0.25,
      "flavour": "Citrus Orange",
-     "price": 925,
+     "price": 842,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0GF2V3SS4"
     }
@@ -2961,7 +2973,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 7603,
+     "price": 7849,
      "seller": "RK World Infocom",
      "url": "https://www.amazon.in/dp/B0D17K39TW",
      "third_party": false
@@ -3021,7 +3033,7 @@
      "store": "Amazon",
      "size_kg": 1,
      "flavour": "Unflavoured",
-     "price": 7199,
+     "price": 6399,
      "seller": "Nutritionalab (brand)",
      "url": "https://www.amazon.in/dp/B0DMNVJXMW"
     }
@@ -3103,7 +3115,7 @@
      "store": "asitisnutrition.com",
      "size_kg": 2,
      "flavour": "Unflavoured",
-     "price": 8979,
+     "price": 8350,
      "seller": "AS-IT-IS (brand)",
      "url": "https://asitisnutrition.com/products/buy-whey-protein-isolate?variant=31473977131059"
     },
@@ -3161,7 +3173,7 @@
      "store": "Amazon",
      "size_kg": 0.5,
      "flavour": "Unflavoured",
-     "price": 2895,
+     "price": 2899,
      "seller": "Bright Lifecare (brand)",
      "url": "https://www.amazon.in/dp/B0953F26ZZ"
     },
@@ -3564,6 +3576,10 @@
   {
    "brand": "just go nutrition, IGNITOR, zeelab, POWERLIFT, bybv Whey More (new on Flipkart)",
    "reason": "Smaller brands that aren't established Indian sports-nutrition brands, and ingredients and serving size weren't confirmed from the listings; bybv Whey More is a whey + yeast protein blend, not a concentrate."
+  },
+  {
+   "brand": "MyFitFuel Clean Whey Protein Concentrate, Unflavoured 1 kg (new)",
+   "reason": "Ingredient list is clean (whey protein concentrate only, 24.2 g protein per scoop as is), but the scoop size isn't stated (only 30 servings per 1 kg) and a buyer review mentions soy lecithin, so it can't be confirmed or ranked fairly yet."
   }
  ]
 }
